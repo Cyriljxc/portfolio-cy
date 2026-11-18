@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyril Jhune C. Canabal - Portfolio / INTCOMP 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- CSS :target Lightbox Modals for Photo Gallery -->
+  <div id="lightbox-1" class="lightbox-modal" role="dialog" aria-label="Official Portrait full resolution view">
+    <a href="#photo-video" class="lightbox-close">CLOSE</a>
+    <div class="lightbox-inner">
+      <img src="images/portrait.png" alt="Official student portrait of Cyril Jhune C. Canabal" width="413" height="531">
+      <div class="lightbox-meta">
+        <span class="mono-xs">CYRIL JHUNE / OFFICIAL STUDENT PORTRAIT (413 X 531)</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="lightbox-2" class="lightbox-modal" role="dialog" aria-label="MIP Internship photo full resolution view">
+    <a href="#photo-video" class="lightbox-close">CLOSE</a>
+    <div class="lightbox-inner">
+      <img src="images/mip-internship.jpg" alt="Cyril Jhune assisting pupils during the Makati Internship Program" width="1024" height="768">
+      <div class="lightbox-meta">
+        <span class="mono-xs">MAKATI INTERNSHIP PROGRAM (MIP) / UMAK COMMUNITY LEARNING (1024 X 768)</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="lightbox-3" class="lightbox-modal" role="dialog" aria-label="Drawing workshop photo full resolution view">
+    <a href="#photo-video" class="lightbox-close">CLOSE</a>
+    <div class="lightbox-inner">
+      <img src="images/art-session.jpg" alt="Pupils drawing and coloring during the community workshop" width="768" height="1024">
+      <div class="lightbox-meta">
+        <span class="mono-xs">COMMUNITY OUTREACH / ART AND DRAWING SESSION (768 X 1024)</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="lightbox-4" class="lightbox-modal" role="dialog" aria-label="Campus profile photo full resolution view">
+    <a href="#photo-video" class="lightbox-close">CLOSE</a>
+    <div class="lightbox-inner">
+      <img src="images/profile.jpg" alt="Cyril Jhune campus profile portrait" width="413" height="531">
+      <div class="lightbox-meta">
+        <span class="mono-xs">CAMPUS PROFILE / UNIVERSITY OF MAKATI (413 X 531)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Architectural Header: Strictly 3 Nav Items -->
+  <header class="site-header">
+    <div class="header-top">
+      <a href="#hero" class="brand-link" aria-label="Go to top of page">
+        <svg class="cjc-header-logo" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+          <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+        </svg>
+        <span class="brand-surname">CYRIL JHUNE</span>
+        <span class="brand-year">PORTFOLIO / 2026</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link active">HOME</a>
+        <a href="#photo-video" class="nav-link">PHOTO / VIDEO</a>
+        <div class="nav-dropdown">
+          <input type="checkbox" id="nav-act-toggle" class="nav-act-toggle" aria-label="Toggle activities dropdown menu">
+          <div class="nav-act-trigger">
+            <a href="#activities" class="nav-link">ACTIVITIES</a>
+            <label for="nav-act-toggle" class="nav-act-caret" title="Toggle Activities Menu">+</label>
+          </div>
+          <div class="nav-dropdown-menu">
+            <a href="calendar.html" class="nav-dropdown-item">01. Calendar</a>
+            <a href="resume.html" class="nav-dropdown-item">02. Resume</a>
+            <a href="table.html" class="nav-dropdown-item">03. Table</a>
+            <a href="font-text.html" class="nav-dropdown-item">04. Font Text</a>
+            <a href="layout.html" class="nav-dropdown-item">05. Layout</a>
+            <a href="background.html" class="nav-dropdown-item">06. Background</a>
+            <a href="logo.html" class="nav-dropdown-item">07. Logo</a>
+            <a href="frame.html" class="nav-dropdown-item">08. Frame</a>
+            <a href="button.html" class="nav-dropdown-item">09. Buttons</a>
+            <a href="draft.html" class="nav-dropdown-item">10. Draft</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-controls">
+        <a href="#contact" class="clipped-cta">GET IN TOUCH</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ====================================================================
+         01 / HERO SECTION
+         ==================================================================== -->
+    <section id="hero" class="hero-section">
+      <div class="hero-portrait-wrap">
+        <img
+          src="images/portrait.png"
+          alt="Official student portrait of Cyril Jhune C. Canabal"
+          width="413"
+          height="531"
+          class="hero-portrait-img"
+        >
+      </div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+
+      <div class="hero-body">
+        <div class="hero-copy">
+          <p class="hero-role">Cyril Jhune C. Canabal</p>
+          <p class="hero-stack">First-Year BSIT Student / University of Makati</p>
+
+          <h1 class="hero-display" aria-label="Portfolio Cyril.">
+            <span class="display-line-1">PORTFOLIO</span>
+            <span class="display-line-2">CYRIL.</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="hero-footer-bar">
+        <div class="hero-meta-items">
+          <span class="meta-item">
+            <span class="sq-bullet"></span>
+            <span>BSIT FIRST YEAR / UMAK</span>
+          </span>
+          <span class="meta-item">
+            <span class="sq-bullet"></span>
+            <span>BARANGAY OLYMPIA, MAKATI</span>
+          </span>
+          <span class="meta-item">
+            <span class="sq-bullet"></span>
+            <span>10 ACTIVITIES LINKED BELOW</span>
+          </span>
+        </div>
+        <a href="#activities" class="scroll-indicator">SCROLL DOWN</a>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         02 / PHOTO & VIDEO SHOWCASE SECTION
+         ==================================================================== -->
+    <section id="photo-video" class="portfolio-section">
+      <div class="section-container">
+        <div class="section-index-row">
+          <span class="index-num">01</span>
+          <div class="index-rule"></div>
+          <span class="index-label">PHOTO &amp; VIDEO SHOWCASE</span>
+        </div>
+      </div>
+
+      <div class="marquee-wrap" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="m-outline">PHOTO</span><span class="m-solid">GALLERY</span>
+          <span class="m-outline">HTML5</span><span class="m-solid">VIDEO</span>
+          <span class="m-outline">PHOTO</span><span class="m-solid">GALLERY</span>
+          <span class="m-outline">HTML5</span><span class="m-solid">VIDEO</span>
+        </div>
+      </div>
+
+      <div class="section-container section-pad">
+        <div class="group-heading-row">
+          <p class="mono-section-tag">Part A // Responsive Image Gallery (Click for Lightbox)</p>
+          <span class="mono-xs">PURE CSS :TARGET LIGHTBOX</span>
+        </div>
+
+        <!-- 4-Image Responsive Grid -->
+        <div class="gallery-grid">
+          <!-- Photo 1 -->
+          <figure class="gallery-figure">
+            <a href="#lightbox-1" class="gallery-link" aria-label="Open Official Portrait in lightbox">
+              <img
+                src="images/portrait.png"
+                alt="Formal student portrait of Cyril Jhune C. Canabal"
+                width="413"
+                height="531"
+                loading="lazy"
+              >
+            </a>
+            <figcaption class="gallery-caption">
+              <h3>Official Student Portrait</h3>
+              <p>Formal academic photograph taken for university records and official identification.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Photo 2 -->
+          <figure class="gallery-figure">
+            <a href="#lightbox-2" class="gallery-link" aria-label="Open MIP Internship photo in lightbox">
+              <img
+                src="images/mip-internship.jpg"
+                alt="Cyril Jhune assisting pupils during the Makati Internship Program"
+                width="1024"
+                height="768"
+                loading="lazy"
+              >
+            </a>
+            <figcaption class="gallery-caption">
+              <h3>Makati Internship Program (MIP)</h3>
+              <p>Assisting elementary pupils during an on-campus community learning session at UMak.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Photo 3 -->
+          <figure class="gallery-figure">
+            <a href="#lightbox-3" class="gallery-link" aria-label="Open Drawing session photo in lightbox">
+              <img
+                src="images/art-session.jpg"
+                alt="Pupils drawing and coloring during the community workshop"
+                width="768"
+                height="1024"
+                loading="lazy"
+              >
+            </a>
+            <figcaption class="gallery-caption">
+              <h3>Community Drawing Workshop</h3>
+              <p>Young learners completing drawing and coloring worksheets during the internship session.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Photo 4 -->
+          <figure class="gallery-figure">
+            <a href="#lightbox-4" class="gallery-link" aria-label="Open Campus Profile photo in lightbox">
+              <img
+                src="images/profile.jpg"
+                alt="Cyril Jhune campus profile portrait"
+                width="413"
+                height="531"
+                loading="lazy"
+              >
+            </a>
+            <figcaption class="gallery-caption">
+              <h3>Campus Profile Portrait</h3>
+              <p>Close-up student profile portrait taken on the University of Makati campus grounds.</p>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Part B: Dual Video Showcase (video1.mp4 & video2.mp4) -->
+        <div class="group-heading-row mt-35">
+          <p class="mono-section-tag">Part B // HTML5 Video Reel Showcase (Community Outreach Program)</p>
+          <span class="mono-xs">video1.mp4 &amp; video2.mp4</span>
+        </div>
+
+        <div class="video-showcase-grid">
+          <!-- Video 1 -->
+          <figure class="video-figure">
+            <div class="video-player-wrap">
+              <video controls preload="metadata" poster="images/poster-outreach1.jpg">
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element. Download <a href="video1.mp4">video1.mp4</a> directly.
+              </video>
+            </div>
+            <figcaption class="video-caption">
+              <h3>Reel 01: Community Outreach Classroom Session</h3>
+              <p>Cyril Jhune mentoring elementary pupils during the Makati Internship Program community learning workshop.</p>
+            </figcaption>
+          </figure>
+
+          <!-- Video 2 -->
+          <figure class="video-figure">
+            <div class="video-player-wrap">
+              <video controls preload="metadata" poster="images/poster-outreach2.jpg">
+                <source src="video2.mp4" type="video/mp4">
+                Your browser does not support the HTML5 video element. Download <a href="video2.mp4">video2.mp4</a> directly.
+              </video>
+            </div>
+            <figcaption class="video-caption">
+              <h3>Reel 02: Community Outreach Group Session</h3>
+              <p>Volunteers and young learners celebrating after the conclusion of the community outreach program.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         03 / ACTIVITIES DIRECTORY HUB
+         ==================================================================== -->
+    <section id="activities" class="portfolio-section">
+      <div class="section-container">
+        <div class="section-index-row">
+          <span class="index-num">02</span>
+          <div class="index-rule"></div>
+          <span class="index-label">ACTIVITIES DIRECTORY // COMPLETE COURSEWORK</span>
+        </div>
+      </div>
+
+      <div class="section-container section-pad">
+        <div class="group-heading-row">
+          <p class="mono-section-tag">Coursework Activities Hub</p>
+          <span class="mono-xs">10 DEDICATED HTML5 / CSS3 PAGES</span>
+        </div>
+
+        <div class="activities-cards-grid">
+          <!-- 01. Calendar -->
+          <a href="calendar.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 01</span>
+              <span class="mono-xs">CALENDAR.HTML</span>
+            </div>
+            <h2 class="act-card-title">01. Calendar</h2>
+            <p class="act-card-desc">Complete 2026 academic calendar from January to December with Sunday-start monthly tables, weekend styling, highlighted current date (Nov 9), and scheduled milestones.</p>
+            <div class="act-card-footer">
+              <span class="act-pill">ANNUAL 2026</span>
+              <span class="act-pill">JAN - DEC</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 02. Resume -->
+          <a href="resume.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 02</span>
+              <span class="mono-xs">RESUME.HTML</span>
+            </div>
+            <h2 class="act-card-title">02. Resume</h2>
+            <p class="act-card-desc">Student curriculum vitae with personal info, career objective, education timeline with honors, soft skills, and print styles for Ctrl+P.</p>
+            <div class="act-card-footer">
+              <span class="act-pill">CV TIMELINE</span>
+              <span class="act-pill">PRINT CSS</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 03. Table -->
+          <a href="table.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 03</span>
+              <span class="mono-xs">TABLE.HTML</span>
+            </div>
+            <h2 class="act-card-title">03. Table</h2>
+            <p class="act-card-desc">First-semester BSIT class schedule data table with zebra rows, row hover highlight, and a second table demonstrating colspan and rowspan.</p>
+            <div class="act-card-footer">
+              <span class="act-pill">DATA TABLE</span>
+              <span class="act-pill">COLSPAN/ROWSPAN</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 04. Font Text -->
+          <a href="font-text.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 04</span>
+              <span class="mono-xs">FONT-TEXT.HTML</span>
+            </div>
+            <h2 class="act-card-title">04. Font Text</h2>
+            <p class="act-card-desc">Heading hierarchy from h1 to h6, inline formatting tags (bold, italic, mark, sub, sup, code), and side-by-side specimens of Geist and Geist Mono.</p>
+            <div class="act-card-footer">
+              <span class="act-pill">TYPOGRAPHY</span>
+              <span class="act-pill">GEIST FONTS</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 05. Layout -->
+          <a href="layout.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 05</span>
+              <span class="mono-xs">LAYOUT.HTML</span>
+            </div>
+            <h2 class="act-card-title">05. Layout</h2>
+            <p class="act-card-desc">Side-by-side labeled demonstrations of CSS Grid (3-column card grid with wide spanning item) and Flexbox (wrapping items with flex-grow).</p>
+            <div class="act-card-footer">
+              <span class="act-pill">CSS GRID</span>
+              <span class="act-pill">FLEXBOX</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 06. Background -->
+          <a href="background.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 06</span>
+              <span class="mono-xs">BACKGROUND.HTML</span>
+            </div>
+            <h2 class="act-card-title">06. Background</h2>
+            <p class="act-card-desc">Four simultaneously visible surface treatments: solid color, linear gradient, radial gradient, and image background with dark overlay.</p>
+            <div class="act-card-footer">
+              <span class="act-pill">GRADIENTS</span>
+              <span class="act-pill">IMAGE COVER</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 07. Logo -->
+          <a href="logo.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 07</span>
+              <span class="mono-xs">LOGO.HTML</span>
+            </div>
+            <h2 class="act-card-title">07. Logo</h2>
+            <p class="act-card-desc">Original CJC monogram logo designed in scalable vector graphics, shown large, at 32px favicon resolution, and on dark and light surfaces.</p>
+            <div class="act-card-footer">
+              <span class="act-pill">INLINE SVG</span>
+              <span class="act-pill">MONOGRAM</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 08. Frame -->
+          <a href="frame.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 08</span>
+              <span class="mono-xs">FRAME.HTML</span>
+            </div>
+            <h2 class="act-card-title">08. Frame</h2>
+            <p class="act-card-desc">Five picture frame treatments (thin border, matte padding, box shadow, circle crop, polaroid) and a responsive embedded HTML iframe sandbox.</p>
+            <div class="act-card-footer">
+              <span class="act-pill">5 FRAMES</span>
+              <span class="act-pill">IFRAME</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 09. Buttons -->
+          <a href="button.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 09</span>
+              <span class="mono-xs">BUTTON.HTML</span>
+            </div>
+            <h2 class="act-card-title">09. Buttons</h2>
+            <p class="act-card-desc">Primary, secondary, outline, ghost, disabled, and icon buttons in three sizes with CSS hover/active states, plus a contact action form.</p>
+            <div class="act-card-footer">
+              <span class="act-pill">3 SIZES</span>
+              <span class="act-pill">MAILTO FORM</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 10. Draft -->
+          <a href="draft.html" class="act-link-card">
+            <div class="act-card-top">
+              <span class="mono-xs text-accent">ACTIVITY 10</span>
+              <span class="mono-xs">DRAFT.HTML</span>
+            </div>
+            <h2 class="act-card-title">10. Draft</h2>
+            <p class="act-card-desc">Static rubric table detailing Design (50%), Content (25%), and Functionality (25%) standards, with an information architecture site blueprint.</p>
+            <div class="act-card-footer">
+              <span class="act-pill">RUBRIC 100%</span>
+              <span class="act-pill">BLUEPRINT</span>
+              <span class="open-tab-label">OPEN ACTIVITY &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         04 / GET IN TOUCH SECTION
+         ==================================================================== -->
+    <section id="contact" class="portfolio-section">
+      <div class="section-container">
+        <div class="section-index-row">
+          <span class="index-num">03</span>
+          <div class="index-rule"></div>
+          <span class="index-label">GET IN TOUCH // INQUIRIES &amp; CONNECT</span>
+        </div>
+      </div>
+
+      <div class="section-container section-pad">
+        <div class="group-heading-row">
+          <p class="mono-section-tag">Direct Communication Channels</p>
+          <span class="mono-xs">MAILTO ACTION HANDLER</span>
+        </div>
+
+        <div class="studio-two-col">
+          <div class="studio-panel">
+            <span class="mono-section-tag">Contact Information</span>
+            <h2 class="panel-heading">Cyril Jhune C. Canabal</h2>
+            <p class="panel-sub">Feel free to reach out regarding college coursework, IT collaboration, or project feedback.</p>
+
+            <div class="resume-kv-grid mt-15">
+              <div class="resume-kv-item">
+                <span>Personal Email</span>
+                <strong>cy.portfolio@student.edu.ph</strong>
+              </div>
+              <div class="resume-kv-item">
+                <span>Mobile Phone</span>
+                <strong>09704765386</strong>
+              </div>
+              <div class="resume-kv-item">
+                <span>Location</span>
+                <strong>Barangay Olympia, Makati City</strong>
+              </div>
+              <div class="resume-kv-item">
+                <span>University</span>
+                <strong>University of Makati (UMak)</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-panel">
+            <span class="mono-section-tag">Send Message</span>
+            <h2 class="panel-heading">Mailto Contact Form</h2>
+            <form action="mailto:cy.portfolio@student.edu.ph" method="post" enctype="text/plain">
+              <div class="contact-fields-grid">
+                <label class="form-field-label">
+                  Your Full Name
+                  <input type="text" name="name" class="form-input-text" placeholder="Enter your full name..." required>
+                </label>
+
+                <label class="form-field-label">
+                  Your Email Address
+                  <input type="email" name="email" class="form-input-text" placeholder="Enter your email address..." required>
+                </label>
+
+                <label class="form-field-label field-full">
+                  Message
+                  <textarea name="message" class="form-textarea" placeholder="Enter your message or project notes..." required></textarea>
+                </label>
+              </div>
+
+              <div class="form-action-row">
+                <button type="submit" class="btn btn-primary btn-md">Send Message (Mailto)</button>
+                <button type="reset" class="btn btn-secondary btn-md">Reset Form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Architectural Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo-row" aria-label="Cyril Jhune Homepage">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+            <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+          </svg>
+          <span>Cyril Jhune C. Canabal</span>
+        </a>
+        <p class="footer-tagline">First-year BSIT student at the University of Makati.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Main Sections</p>
+        <a href="#hero">Home</a>
+        <a href="#photo-video">Photo / Video</a>
+        <a href="#activities">Activities Hub</a>
+        <a href="#contact">Get in Touch</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 01 - 05</p>
+        <a href="calendar.html">01. Calendar</a>
+        <a href="resume.html">02. Resume</a>
+        <a href="table.html">03. Table</a>
+        <a href="font-text.html">04. Font Text</a>
+        <a href="layout.html">05. Layout</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 06 - 10</p>
+        <a href="background.html">06. Background</a>
+        <a href="logo.html">07. Logo</a>
+        <a href="frame.html">08. Frame</a>
+        <a href="button.html">09. Buttons</a>
+        <a href="draft.html">10. Draft</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>(C) 2026 Cyril Jhune C. Canabal.</p>
+      <a href="#activities" class="mono-xs text-accent back-link">Back to Top / Activities Hub</a>
+    </div>
+  </footer>
+</body>
+</html>

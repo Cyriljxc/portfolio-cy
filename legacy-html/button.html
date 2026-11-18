@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 09: Buttons - Cyril Jhune Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html#hero" class="brand-link" aria-label="Go to homepage">
+        <svg class="cjc-header-logo" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+          <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+        </svg>
+        <span class="brand-surname">CYRIL JHUNE</span>
+        <span class="brand-year">PORTFOLIO / 2026</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html#hero" class="nav-link">HOME</a>
+        <a href="index.html#photo-video" class="nav-link">PHOTO / VIDEO</a>
+        <div class="nav-dropdown">
+          <input type="checkbox" id="nav-act-toggle" class="nav-act-toggle" aria-label="Toggle activities dropdown menu">
+          <div class="nav-act-trigger">
+            <a href="index.html#activities" class="nav-link active">ACTIVITIES</a>
+            <label for="nav-act-toggle" class="nav-act-caret" title="Toggle Activities Menu">+</label>
+          </div>
+          <div class="nav-dropdown-menu">
+            <a href="calendar.html" class="nav-dropdown-item">01. Calendar</a>
+            <a href="resume.html" class="nav-dropdown-item">02. Resume</a>
+            <a href="table.html" class="nav-dropdown-item">03. Table</a>
+            <a href="font-text.html" class="nav-dropdown-item">04. Font Text</a>
+            <a href="layout.html" class="nav-dropdown-item">05. Layout</a>
+            <a href="background.html" class="nav-dropdown-item">06. Background</a>
+            <a href="logo.html" class="nav-dropdown-item">07. Logo</a>
+            <a href="frame.html" class="nav-dropdown-item">08. Frame</a>
+            <a href="button.html" class="nav-dropdown-item">09. Buttons</a>
+            <a href="draft.html" class="nav-dropdown-item">10. Draft</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-controls">
+        <a href="index.html#contact" class="clipped-cta">GET IN TOUCH</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="activity-page-wrap">
+    <div class="activity-page-header">
+      <div class="activity-header-left">
+        <span class="mono-section-tag">Activity 09 // UI Controls</span>
+        <h1 class="activity-page-title">CSS Button States and Contact Action Form</h1>
+        <p class="activity-page-desc">
+          This page showcases interactive CSS button variants across three size scales, using semantic anchors for navigation and button elements for actions. A native contact form provides required field validation and a mailto submission action.
+        </p>
+      </div>
+      <a href="index.html#activities" class="mono-chip">Back to Activities</a>
+    </div>
+
+    <div class="buttons-showcase-stack">
+      <!-- 1. Primary Buttons in 3 Sizes -->
+      <section class="button-scale-card" aria-label="Primary Button Scale">
+        <span class="mono-section-tag">Variant 01 // High-Emphasis Action</span>
+        <h2 class="panel-heading">Primary Button (Small, Medium, Large)</h2>
+        <p class="panel-sub">Solid cobalt background with :hover brightness, :focus-visible outline ring, and :active press feedback.</p>
+
+        <div class="button-row-display">
+          <button type="button" class="btn btn-primary btn-sm">Primary Small</button>
+          <button type="button" class="btn btn-primary btn-md">Primary Medium</button>
+          <button type="button" class="btn btn-primary btn-lg">Primary Large</button>
+        </div>
+      </section>
+
+      <!-- 2. Secondary & Outline Buttons in 3 Sizes -->
+      <section class="button-scale-card" aria-label="Secondary and Outline Button Scales">
+        <span class="mono-section-tag">Variant 02 &amp; 03 // Surface &amp; Outline</span>
+        <h2 class="panel-heading">Secondary &amp; Outline Buttons (3 Sizes)</h2>
+        <p class="panel-sub">Secondary buttons use elevated charcoal surfaces; outline buttons feature crisp 1px borders that fill with accent tint on hover.</p>
+
+        <div class="button-row-display">
+          <button type="button" class="btn btn-secondary btn-sm">Secondary Small</button>
+          <button type="button" class="btn btn-secondary btn-md">Secondary Medium</button>
+          <button type="button" class="btn btn-secondary btn-lg">Secondary Large</button>
+        </div>
+
+        <div class="button-row-display mt-1">
+          <a href="calendar.html" class="btn btn-outline btn-sm">Outline Small (Link)</a>
+          <a href="resume.html" class="btn btn-outline btn-md">Outline Medium (Link)</a>
+          <a href="table.html" class="btn btn-outline btn-lg">Outline Large (Link)</a>
+        </div>
+      </section>
+
+      <!-- 3. Ghost, Disabled, and Icon Buttons in 3 Sizes -->
+      <section class="button-scale-card" aria-label="Ghost, Disabled and Icon Buttons">
+        <span class="mono-section-tag">Variant 04, 05 &amp; 06 // Specialized Controls</span>
+        <h2 class="panel-heading">Ghost, Disabled &amp; Icon-With-Text Buttons</h2>
+        <p class="panel-sub">Low-contrast ghost buttons for subtle actions, native disabled buttons with not-allowed cursors, and inline SVG icon buttons.</p>
+
+        <!-- Ghost Buttons -->
+        <div class="button-row-display">
+          <button type="button" class="btn btn-ghost btn-sm">Ghost Small</button>
+          <button type="button" class="btn btn-ghost btn-md">Ghost Medium</button>
+          <button type="button" class="btn btn-ghost btn-lg">Ghost Large</button>
+        </div>
+
+        <!-- Disabled Buttons -->
+        <div class="button-row-display mt-1">
+          <button type="button" class="btn btn-sm" disabled>Disabled Small</button>
+          <button type="button" class="btn btn-md" disabled>Disabled Medium</button>
+          <button type="button" class="btn btn-lg" disabled>Disabled Large</button>
+        </div>
+
+        <!-- Icon with Text Buttons -->
+        <div class="button-row-display mt-1">
+          <a href="index.html#photo-video" class="btn btn-secondary btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            Gallery Small
+          </a>
+          <a href="index.html#photo-video" class="btn btn-secondary btn-md">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            Photo / Video Medium
+          </a>
+          <a href="index.html#photo-video" class="btn btn-secondary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            View Gallery Large
+          </a>
+        </div>
+      </section>
+
+      <!-- 4. Contact Form with Submit and Reset -->
+      <section class="contact-form-panel" aria-label="Contact Action Form">
+        <span class="mono-section-tag">Native Form Handler</span>
+        <h2 class="panel-heading">Contact Action Form (Mailto Submission)</h2>
+        <p class="panel-sub">Accessible form using labeled inputs with required validation, a message textarea, and pure CSS submit and reset controls.</p>
+
+        <form action="mailto:cy.portfolio@student.edu.ph" method="post" enctype="text/plain">
+          <div class="contact-fields-grid">
+            <label class="form-field-label">
+              Sender Full Name
+              <input type="text" name="name" class="form-input-text" placeholder="Cyril Jhune C. Canabal" required>
+            </label>
+
+            <label class="form-field-label">
+              Sender Email Address
+              <input type="email" name="email" class="form-input-text" placeholder="cy.portfolio@student.edu.ph" required>
+            </label>
+
+            <label class="form-field-label field-full">
+              Message or Inquiries
+              <textarea name="message" class="form-textarea" placeholder="Enter project feedback, schedule inquiry, or coursework remarks..." required></textarea>
+            </label>
+          </div>
+
+          <div class="form-action-row">
+            <button type="submit" class="btn btn-primary btn-md">Submit Message (Mailto)</button>
+            <button type="reset" class="btn btn-secondary btn-md">Reset Form</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo-row" aria-label="Cyril Jhune Homepage">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+            <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+          </svg>
+          <span>Cyril Jhune C. Canabal</span>
+        </a>
+        <p class="footer-tagline">First-year BSIT student at the University of Makati.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Main Sections</p>
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#photo-video">Photo / Video</a>
+        <a href="index.html#activities">Activities Hub</a>
+        <a href="index.html#contact">Get in Touch</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 01 - 05</p>
+        <a href="calendar.html">01. Calendar</a>
+        <a href="resume.html">02. Resume</a>
+        <a href="table.html">03. Table</a>
+        <a href="font-text.html">04. Font Text</a>
+        <a href="layout.html">05. Layout</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 06 - 10</p>
+        <a href="background.html">06. Background</a>
+        <a href="logo.html">07. Logo</a>
+        <a href="frame.html">08. Frame</a>
+        <a href="button.html">09. Buttons</a>
+        <a href="draft.html">10. Draft</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>(C) 2026 Cyril Jhune C. Canabal.</p>
+      <a href="index.html#activities" class="mono-xs text-accent back-link">Back to Activities Directory</a>
+    </div>
+  </footer>
+</body>
+</html>

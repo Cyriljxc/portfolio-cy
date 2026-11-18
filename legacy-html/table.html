@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 03: Table - Cyril Jhune Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html#hero" class="brand-link" aria-label="Go to homepage">
+        <svg class="cjc-header-logo" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+          <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+        </svg>
+        <span class="brand-surname">CYRIL JHUNE</span>
+        <span class="brand-year">PORTFOLIO / 2026</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html#hero" class="nav-link">HOME</a>
+        <a href="index.html#photo-video" class="nav-link">PHOTO / VIDEO</a>
+        <div class="nav-dropdown">
+          <input type="checkbox" id="nav-act-toggle" class="nav-act-toggle" aria-label="Toggle activities dropdown menu">
+          <div class="nav-act-trigger">
+            <a href="index.html#activities" class="nav-link active">ACTIVITIES</a>
+            <label for="nav-act-toggle" class="nav-act-caret" title="Toggle Activities Menu">+</label>
+          </div>
+          <div class="nav-dropdown-menu">
+            <a href="calendar.html" class="nav-dropdown-item">01. Calendar</a>
+            <a href="resume.html" class="nav-dropdown-item">02. Resume</a>
+            <a href="table.html" class="nav-dropdown-item">03. Table</a>
+            <a href="font-text.html" class="nav-dropdown-item">04. Font Text</a>
+            <a href="layout.html" class="nav-dropdown-item">05. Layout</a>
+            <a href="background.html" class="nav-dropdown-item">06. Background</a>
+            <a href="logo.html" class="nav-dropdown-item">07. Logo</a>
+            <a href="frame.html" class="nav-dropdown-item">08. Frame</a>
+            <a href="button.html" class="nav-dropdown-item">09. Buttons</a>
+            <a href="draft.html" class="nav-dropdown-item">10. Draft</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-controls">
+        <a href="index.html#contact" class="clipped-cta">GET IN TOUCH</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="activity-page-wrap">
+    <div class="activity-page-header">
+      <div class="activity-header-left">
+        <span class="mono-section-tag">Activity 03 // Semantic Data Tables</span>
+        <h1 class="activity-page-title">Class Schedule and Structured HTML Tables</h1>
+        <p class="activity-page-desc">
+          This page presents my official first-semester BSIT course schedule in a semantic table with zebra striping and row hover effects. A second matrix demonstrates multi-row and multi-column span mechanics.
+        </p>
+      </div>
+      <a href="index.html#activities" class="mono-chip">Back to Activities</a>
+    </div>
+
+    <!-- Table 1: Real BSIT Class Schedule -->
+    <section class="table-demo-wrap" aria-label="Primary Course Schedule Table">
+      <span class="mono-section-tag">Primary Data Matrix</span>
+      <h2 class="panel-heading">BSIT First Year / First Semester Schedule</h2>
+      <p class="panel-sub">Complete weekly schedule including course codes, lecture and lab room assignments, and academic credit units at the University of Makati.</p>
+
+      <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="BSIT Course Schedule Table">
+        <table class="data-table">
+          <caption>Official Subject Schedule: BSIT 1st Year, 1st Semester (A.Y. 2026-2027)</caption>
+          <thead>
+            <tr>
+              <th scope="col">Course Code</th>
+              <th scope="col">Subject Description</th>
+              <th scope="col">Day</th>
+              <th scope="col">Time</th>
+              <th scope="col">Room</th>
+              <th scope="col" class="text-right">Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">CC101</th>
+              <td>Introduction to Computing</td>
+              <td>Monday</td>
+              <td>08:00 AM - 11:00 AM</td>
+              <td>Lab 304</td>
+              <td class="text-right">3</td>
+            </tr>
+            <tr>
+              <th scope="row">CC102</th>
+              <td>Computer Programming 1</td>
+              <td>Tuesday / Thursday</td>
+              <td>01:00 PM - 03:30 PM</td>
+              <td>Lab 308</td>
+              <td class="text-right">3</td>
+            </tr>
+            <tr>
+              <th scope="row">IT101</th>
+              <td>Web Systems and Technologies (HTML5 &amp; CSS3)</td>
+              <td>Wednesday</td>
+              <td>09:00 AM - 12:00 PM</td>
+              <td>Lab 202</td>
+              <td class="text-right">3</td>
+            </tr>
+            <tr>
+              <th scope="row">GE01</th>
+              <td>Understanding the Self</td>
+              <td>Monday</td>
+              <td>01:00 PM - 04:00 PM</td>
+              <td>Room 412</td>
+              <td class="text-right">3</td>
+            </tr>
+            <tr>
+              <th scope="row">GE04</th>
+              <td>Mathematics in the Modern World</td>
+              <td>Friday</td>
+              <td>08:00 AM - 11:00 AM</td>
+              <td>Room 501</td>
+              <td class="text-right">3</td>
+            </tr>
+            <tr>
+              <th scope="row">NSTP1</th>
+              <td>National Service Training Program 1</td>
+              <td>Saturday</td>
+              <td>08:00 AM - 11:00 AM</td>
+              <td>Quadrangle</td>
+              <td class="text-right">3</td>
+            </tr>
+            <tr>
+              <th scope="row">PATHFit 1</th>
+              <td>Movement Competency Training</td>
+              <td>Wednesday</td>
+              <td>02:00 PM - 04:00 PM</td>
+              <td>Gymnasium</td>
+              <td class="text-right">2</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="5">Total Enrolled Academic Units</th>
+              <td class="text-right"><strong>20 Units</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <!-- Table 2: Colspan and Rowspan Matrix -->
+    <section class="table-demo-wrap" aria-label="Colspan and Rowspan Matrix">
+      <span class="mono-section-tag">Spanning Demonstration</span>
+      <h2 class="panel-heading">Curriculum Unit Distribution Matrix</h2>
+      <p class="panel-sub">Illustrates complex table cells using <code>colspan</code> to span multiple day categories and <code>rowspan</code> to group course classification domains.</p>
+
+      <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="Curriculum Unit Spanning Table">
+        <table class="matrix-table">
+          <caption>Unit Allocation by Academic Domain and Session Type (Colspan &amp; Rowspan)</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Curriculum Domain</th>
+              <th scope="col" rowspan="2">Course Area</th>
+              <th scope="col" colspan="2">Class Session Type</th>
+              <th scope="col" rowspan="2">Total Units</th>
+            </tr>
+            <tr>
+              <th scope="col">Lecture Units</th>
+              <th scope="col">Laboratory Units</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" rowspan="2">Computing Major Courses</th>
+              <td>Intro to Computing (CC101) &amp; Web Systems (IT101)</td>
+              <td>4</td>
+              <td>2</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Computer Programming 1 (CC102)</td>
+              <td>2</td>
+              <td>1</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <th scope="row" rowspan="2">General Education &amp; Mandated</th>
+              <td>Understanding Self (GE01) &amp; Modern Math (GE04)</td>
+              <td>6</td>
+              <td>0</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>NSTP 1 &amp; Physical Education (PATHFit 1)</td>
+              <td>5</td>
+              <td>0</td>
+              <td>5</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="2">Semester Total Credit Summary</th>
+              <td><strong>17 Lecture</strong></td>
+              <td><strong>3 Lab</strong></td>
+              <td><strong>20 Total</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo-row" aria-label="Cyril Jhune Homepage">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+            <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+          </svg>
+          <span>Cyril Jhune C. Canabal</span>
+        </a>
+        <p class="footer-tagline">First-year BSIT student at the University of Makati.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Main Sections</p>
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#photo-video">Photo / Video</a>
+        <a href="index.html#activities">Activities Hub</a>
+        <a href="index.html#contact">Get in Touch</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 01 - 05</p>
+        <a href="calendar.html">01. Calendar</a>
+        <a href="resume.html">02. Resume</a>
+        <a href="table.html">03. Table</a>
+        <a href="font-text.html">04. Font Text</a>
+        <a href="layout.html">05. Layout</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 06 - 10</p>
+        <a href="background.html">06. Background</a>
+        <a href="logo.html">07. Logo</a>
+        <a href="frame.html">08. Frame</a>
+        <a href="button.html">09. Buttons</a>
+        <a href="draft.html">10. Draft</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>(C) 2026 Cyril Jhune C. Canabal.</p>
+      <a href="index.html#activities" class="mono-xs text-accent back-link">Back to Activities Directory</a>
+    </div>
+  </footer>
+</body>
+</html>

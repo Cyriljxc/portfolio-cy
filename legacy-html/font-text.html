@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 04: Font &amp; Text - Cyril Jhune Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html#hero" class="brand-link" aria-label="Go to homepage">
+        <svg class="cjc-header-logo" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+          <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+        </svg>
+        <span class="brand-surname">CYRIL JHUNE</span>
+        <span class="brand-year">PORTFOLIO / 2026</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html#hero" class="nav-link">HOME</a>
+        <a href="index.html#photo-video" class="nav-link">PHOTO / VIDEO</a>
+        <div class="nav-dropdown">
+          <input type="checkbox" id="nav-act-toggle" class="nav-act-toggle" aria-label="Toggle activities dropdown menu">
+          <div class="nav-act-trigger">
+            <a href="index.html#activities" class="nav-link active">ACTIVITIES</a>
+            <label for="nav-act-toggle" class="nav-act-caret" title="Toggle Activities Menu">+</label>
+          </div>
+          <div class="nav-dropdown-menu">
+            <a href="calendar.html" class="nav-dropdown-item">01. Calendar</a>
+            <a href="resume.html" class="nav-dropdown-item">02. Resume</a>
+            <a href="table.html" class="nav-dropdown-item">03. Table</a>
+            <a href="font-text.html" class="nav-dropdown-item">04. Font Text</a>
+            <a href="layout.html" class="nav-dropdown-item">05. Layout</a>
+            <a href="background.html" class="nav-dropdown-item">06. Background</a>
+            <a href="logo.html" class="nav-dropdown-item">07. Logo</a>
+            <a href="frame.html" class="nav-dropdown-item">08. Frame</a>
+            <a href="button.html" class="nav-dropdown-item">09. Buttons</a>
+            <a href="draft.html" class="nav-dropdown-item">10. Draft</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-controls">
+        <a href="index.html#contact" class="clipped-cta">GET IN TOUCH</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="activity-page-wrap">
+    <div class="activity-page-header">
+      <div class="activity-header-left">
+        <span class="mono-section-tag">Activity 04 // Typography</span>
+        <h1 class="activity-page-title">Typography and Text Formatting Hierarchy</h1>
+        <p class="activity-page-desc">
+          This page demonstrates HTML heading structures, inline text formatting tags, and semantic lists. It also displays side-by-side static specimens of the two portfolio typefaces, Geist and Geist Mono, across varying weights and sizes.
+        </p>
+      </div>
+      <a href="index.html#activities" class="mono-chip">Back to Activities</a>
+    </div>
+
+    <div class="font-specimen-stack">
+      <!-- Section 1: Headings h1 to h6 -->
+      <section class="type-hierarchy-box" aria-label="HTML Heading Scale">
+        <span class="mono-section-tag">Heading Proportions</span>
+        <h2 class="panel-heading">HTML Headings (h1 to h6)</h2>
+        <p class="panel-sub">Six proportional heading levels providing structured visual hierarchy across documents.</p>
+
+        <div class="heading-sample-row">
+          <h1>Heading 1: Cyril Jhune Portfolio</h1>
+          <span class="mono-xs">&lt;h1&gt; (32px / Bold 900)</span>
+        </div>
+        <div class="heading-sample-row">
+          <h2>Heading 2: BSIT Undergraduate Studies</h2>
+          <span class="mono-xs">&lt;h2&gt; (26px / Bold 800)</span>
+        </div>
+        <div class="heading-sample-row">
+          <h3>Heading 3: University of Makati Coursework</h3>
+          <span class="mono-xs">&lt;h3&gt; (22px / Semi-bold 700)</span>
+        </div>
+        <div class="heading-sample-row">
+          <h4>Heading 4: Web Systems and Technologies</h4>
+          <span class="mono-xs">&lt;h4&gt; (18px / Semi-bold 600)</span>
+        </div>
+        <div class="heading-sample-row">
+          <h5>Heading 5: Front-End Architecture Standards</h5>
+          <span class="mono-xs">&lt;h5&gt; (15px / Medium 500)</span>
+        </div>
+        <div class="heading-sample-row">
+          <h6>Heading 6: Semantic HTML5 Element Specification</h6>
+          <span class="mono-xs">&lt;h6&gt; (13px / Medium 500)</span>
+        </div>
+      </section>
+
+      <!-- Section 2: Inline Text Formatting Tags, Blockquote, and Lists -->
+      <section class="type-hierarchy-box" aria-label="Inline Text Formatting">
+        <span class="mono-section-tag">Semantic Inline Formatting</span>
+        <h2 class="panel-heading">Paragraph, Text Formatting Tags &amp; Lists</h2>
+        <p class="panel-sub">Demonstration of semantic inline elements including bold, italic, underline, strikethrough, highlights, small print, sub/super scripts, blockquote, code, and lists.</p>
+
+        <div class="inline-formatting-grid">
+          <div class="inline-format-card">
+            <span class="format-code-tag">&lt;p&gt; Paragraph</span>
+            <p>A standard paragraph demonstrating regular body text sizing and comfortable reading line-height.</p>
+          </div>
+
+          <div class="inline-format-card">
+            <span class="format-code-tag">&lt;strong&gt; Bold</span>
+            <p>Used to represent <strong>strong importance or urgency</strong> in user interface copy.</p>
+          </div>
+
+          <div class="inline-format-card">
+            <span class="format-code-tag">&lt;em&gt; Italic</span>
+            <p>Used for <em>stress emphasis or specialized terms</em> that change sentence inflection.</p>
+          </div>
+
+          <div class="inline-format-card">
+            <span class="format-code-tag">&lt;u&gt; Underline</span>
+            <p>Represents an unarticulated, non-textual annotation such as a <u>spelling highlight</u>.</p>
+          </div>
+
+          <div class="inline-format-card">
+            <span class="format-code-tag">&lt;s&gt; Strikethrough</span>
+            <p>Represents contents that are <s>no longer accurate or relevant</s> to current specifications.</p>
+          </div>
+
+          <div class="inline-format-card">
+            <span class="format-code-tag">&lt;mark&gt; Highlight</span>
+            <p>Highlights relevant text using the <mark class="text-mark">browser mark tag</mark> for reference.</p>
+          </div>
+
+          <div class="inline-format-card">
+            <span class="format-code-tag">&lt;small&gt; Small Text</span>
+            <p><small>Fine print text used for side comments, legal disclaimers, and metadata notes.</small></p>
+          </div>
+
+          <div class="inline-format-card">
+            <span class="format-code-tag">&lt;sub&gt; &amp; &lt;sup&gt; Scripts</span>
+            <p>Chemical formulas like H<sub>2</sub>O and mathematical exponents like 2<sup>10</sup> = 1024.</p>
+          </div>
+
+          <div class="inline-format-card">
+            <span class="format-code-tag">&lt;code&gt; Monospace Code</span>
+            <p>Inline code snippets such as <code>box-sizing: border-box;</code> and key CSS selector syntax.</p>
+          </div>
+        </div>
+
+        <!-- Blockquote and Lists -->
+        <div class="mt-175">
+          <span class="format-code-tag">&lt;blockquote&gt; Quotation</span>
+          <blockquote class="specimen-quote">
+            "Good web design starts with clear semantic structure, readable typographic rhythm, and accessible user interfaces that work without client-side script overhead."
+          </blockquote>
+        </div>
+
+        <div class="studio-two-col mt-175">
+          <div>
+            <span class="format-code-tag">&lt;ul&gt; Unordered List</span>
+            <ul class="specimen-list-ul">
+              <li>HTML5 Semantic Markup Structure</li>
+              <li>CSS3 Cascading Style Rules</li>
+              <li>Responsive Fluid Breakpoints</li>
+              <li>Accessible Keyboard Navigation</li>
+            </ul>
+          </div>
+          <div>
+            <span class="format-code-tag">&lt;ol&gt; Ordered List</span>
+            <ol class="specimen-list-ol">
+              <li>Define structural HTML document outlines</li>
+              <li>Apply architectural CSS visual hierarchy</li>
+              <li>Audit keyboard focus-visible navigation</li>
+              <li>Verify multi-device viewport rendering</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Geist and Geist Mono Font Comparison -->
+      <section class="font-comparison-grid" aria-label="Website Typeface Comparison">
+        <!-- Font 1: Geist Sans -->
+        <div class="font-sample-card">
+          <div>
+            <span class="mono-section-tag">Primary UI Font</span>
+            <h2 class="panel-heading">Geist Sans</h2>
+            <p class="panel-sub">Modern geometric sans-serif typeface designed for clarity in application interfaces, headings, and long-form body copy.</p>
+          </div>
+
+          <div class="specimen-weight-block">
+            <span class="font-meta-label">GEIST SANS / WEIGHT 300 (LIGHT) / 20PX</span>
+            <p class="font-sans-sample font-sans-w300">
+              Information Technology and Computing at University of Makati.
+            </p>
+          </div>
+
+          <div class="specimen-weight-block">
+            <span class="font-meta-label">GEIST SANS / WEIGHT 400 (REGULAR) / 16PX</span>
+            <p class="font-sans-sample font-sans-w400">
+              The quick brown fox jumps over the lazy dog. 0123456789.
+            </p>
+          </div>
+
+          <div class="specimen-weight-block">
+            <span class="font-meta-label">GEIST SANS / WEIGHT 600 (SEMI-BOLD) / 24PX</span>
+            <p class="font-sans-sample font-sans-w600">
+              Architectural Typography in Web Engineering.
+            </p>
+          </div>
+
+          <div class="specimen-weight-block">
+            <span class="font-meta-label">GEIST SANS / WEIGHT 800 (BOLD) / 30PX</span>
+            <p class="font-sans-sample font-sans-w800">
+              CYRIL JHUNE C. CANABAL BSIT 2026.
+            </p>
+          </div>
+        </div>
+
+        <!-- Font 2: Geist Mono -->
+        <div class="font-sample-card">
+          <div>
+            <span class="mono-section-tag">Technical Monospace Font</span>
+            <h2 class="panel-heading">Geist Mono</h2>
+            <p class="panel-sub">Monospaced font engineered for code syntax, terminal telemetry, data tables, and high-density technical labels.</p>
+          </div>
+
+          <div class="specimen-weight-block">
+            <span class="font-meta-label">GEIST MONO / WEIGHT 400 (REGULAR) / 14PX</span>
+            <p class="font-mono-sample font-mono-w400">
+              const student = { name: "Cyril Jhune", course: "BSIT", units: 20 };
+            </p>
+          </div>
+
+          <div class="specimen-weight-block">
+            <span class="font-meta-label">GEIST MONO / WEIGHT 500 (MEDIUM) / 16PX</span>
+            <p class="font-mono-sample font-mono-w500">
+              STATUS: 200 OK / INTCOMP FINAL SPECIFICATION APPROVED
+            </p>
+          </div>
+
+          <div class="specimen-weight-block">
+            <span class="font-meta-label">GEIST MONO / WEIGHT 700 (BOLD) / 20PX</span>
+            <p class="font-mono-sample font-mono-w700">
+              01000011 01011001 // BINARY MONOGRAM
+            </p>
+          </div>
+
+          <div class="specimen-weight-block">
+            <span class="font-meta-label">GEIST MONO / WEIGHT 800 (HEAVY) / 26PX</span>
+            <p class="font-mono-sample font-mono-w800">
+              HTML5 / CSS3 / PURE STACK
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo-row" aria-label="Cyril Jhune Homepage">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+            <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+          </svg>
+          <span>Cyril Jhune C. Canabal</span>
+        </a>
+        <p class="footer-tagline">First-year BSIT student at the University of Makati.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Main Sections</p>
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#photo-video">Photo / Video</a>
+        <a href="index.html#activities">Activities Hub</a>
+        <a href="index.html#contact">Get in Touch</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 01 - 05</p>
+        <a href="calendar.html">01. Calendar</a>
+        <a href="resume.html">02. Resume</a>
+        <a href="table.html">03. Table</a>
+        <a href="font-text.html">04. Font Text</a>
+        <a href="layout.html">05. Layout</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 06 - 10</p>
+        <a href="background.html">06. Background</a>
+        <a href="logo.html">07. Logo</a>
+        <a href="frame.html">08. Frame</a>
+        <a href="button.html">09. Buttons</a>
+        <a href="draft.html">10. Draft</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>(C) 2026 Cyril Jhune C. Canabal.</p>
+      <a href="index.html#activities" class="mono-xs text-accent back-link">Back to Activities Directory</a>
+    </div>
+  </footer>
+</body>
+</html>

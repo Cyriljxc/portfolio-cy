@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 01: Calendar - Cyril Jhune Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html#hero" class="brand-link" aria-label="Go to homepage">
+        <svg class="cjc-header-logo" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+          <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+        </svg>
+        <span class="brand-surname">CYRIL JHUNE</span>
+        <span class="brand-year">PORTFOLIO / 2026</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html#hero" class="nav-link">HOME</a>
+        <a href="index.html#photo-video" class="nav-link">PHOTO / VIDEO</a>
+        <div class="nav-dropdown">
+          <input type="checkbox" id="nav-act-toggle" class="nav-act-toggle" aria-label="Toggle activities dropdown menu">
+          <div class="nav-act-trigger">
+            <a href="index.html#activities" class="nav-link active">ACTIVITIES</a>
+            <label for="nav-act-toggle" class="nav-act-caret" title="Toggle Activities Menu">+</label>
+          </div>
+          <div class="nav-dropdown-menu">
+            <a href="calendar.html" class="nav-dropdown-item">01. Calendar</a>
+            <a href="resume.html" class="nav-dropdown-item">02. Resume</a>
+            <a href="table.html" class="nav-dropdown-item">03. Table</a>
+            <a href="font-text.html" class="nav-dropdown-item">04. Font Text</a>
+            <a href="layout.html" class="nav-dropdown-item">05. Layout</a>
+            <a href="background.html" class="nav-dropdown-item">06. Background</a>
+            <a href="logo.html" class="nav-dropdown-item">07. Logo</a>
+            <a href="frame.html" class="nav-dropdown-item">08. Frame</a>
+            <a href="button.html" class="nav-dropdown-item">09. Buttons</a>
+            <a href="draft.html" class="nav-dropdown-item">10. Draft</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-controls">
+        <a href="index.html#contact" class="clipped-cta">GET IN TOUCH</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="activity-page-wrap">
+    <div class="activity-page-header">
+      <div class="activity-header-left">
+        <span class="mono-section-tag">Activity 01 // Interactive Monthly Calendar</span>
+        <h1 class="activity-page-title">2026 Academic Calendar</h1>
+        <p class="activity-page-desc">
+          This calendar displays my first-semester academic schedule for 2026 at the University of Makati, focused on November with interactive arrows to flip between months. It highlights weekend dates and marks November 9 as today.
+        </p>
+      </div>
+      <a href="index.html#activities" class="mono-chip">Back to Activities</a>
+    </div>
+
+    <!-- Hidden CSS-Only Month Radio Inputs -->
+    <input type="radio" name="cal-month" id="cal-m01" class="cal-radio" aria-label="January 2026">
+    <input type="radio" name="cal-month" id="cal-m02" class="cal-radio" aria-label="February 2026">
+    <input type="radio" name="cal-month" id="cal-m03" class="cal-radio" aria-label="March 2026">
+    <input type="radio" name="cal-month" id="cal-m04" class="cal-radio" aria-label="April 2026">
+    <input type="radio" name="cal-month" id="cal-m05" class="cal-radio" aria-label="May 2026">
+    <input type="radio" name="cal-month" id="cal-m06" class="cal-radio" aria-label="June 2026">
+    <input type="radio" name="cal-month" id="cal-m07" class="cal-radio" aria-label="July 2026">
+    <input type="radio" name="cal-month" id="cal-m08" class="cal-radio" aria-label="August 2026">
+    <input type="radio" name="cal-month" id="cal-m09" class="cal-radio" aria-label="September 2026">
+    <input type="radio" name="cal-month" id="cal-m10" class="cal-radio" aria-label="October 2026">
+    <input type="radio" name="cal-month" id="cal-m11" class="cal-radio" checked aria-label="November 2026 (Current Month)">
+    <input type="radio" name="cal-month" id="cal-m12" class="cal-radio" aria-label="December 2026">
+
+    <!-- Quick Month Selector Bar (Tabs) -->
+    <nav class="cal-nav-bar" aria-label="Month Selection">
+      <div class="cal-nav-top">
+        <span class="mono-xs text-accent">SELECT MONTH // INTERACTIVE CSS VIEW:</span>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="cal-nav-pills">
+        <label for="cal-m01" class="cal-nav-pill tab-m01">JAN</label>
+        <label for="cal-m02" class="cal-nav-pill tab-m02">FEB</label>
+        <label for="cal-m03" class="cal-nav-pill tab-m03">MAR</label>
+        <label for="cal-m04" class="cal-nav-pill tab-m04">APR</label>
+        <label for="cal-m05" class="cal-nav-pill tab-m05">MAY</label>
+        <label for="cal-m06" class="cal-nav-pill tab-m06">JUN</label>
+        <label for="cal-m07" class="cal-nav-pill tab-m07">JUL</label>
+        <label for="cal-m08" class="cal-nav-pill tab-m08">AUG</label>
+        <label for="cal-m09" class="cal-nav-pill tab-m09">SEP</label>
+        <label for="cal-m10" class="cal-nav-pill tab-m10">OCT</label>
+        <label for="cal-m11" class="cal-nav-pill tab-m11">NOV (TODAY)</label>
+        <label for="cal-m12" class="cal-nav-pill tab-m12">DEC</label>
+      </div>
+    </nav>
+
+    <!-- Month Viewports Container -->
+    <div class="cal-viewports-container">
+    <!-- Month 01 - January 2026 View -->
+    <article id="view-m01" class="cal-single-view" aria-label="January 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <span class="cal-arrow-btn cal-arrow-disabled" aria-hidden="true">&larr; PREV</span>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">01 // JANUARY 2026</span>
+            <h2 class="calendar-month-title">January 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 31 Days</span>
+          </div>
+          <label for="cal-m02" class="cal-arrow-btn" aria-label="Next month: FEB &rarr;">FEB &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="January 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>January 2026 Calendar showing 31 days starting on Thursday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend cal-other">28</span></td>
+                <td><span class="cal-cell cal-other">29</span></td>
+                <td><span class="cal-cell cal-other">30</span></td>
+                <td><span class="cal-cell cal-other">31</span></td>
+                <td><span class="cal-cell">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell cal-weekend">3</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">4</span></td>
+                <td><span class="cal-cell">5</span></td>
+                <td><span class="cal-cell">6</span></td>
+                <td><span class="cal-cell">7</span></td>
+                <td><span class="cal-cell">8</span></td>
+                <td><span class="cal-cell">9</span></td>
+                <td><span class="cal-cell cal-weekend">10</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">11</span></td>
+                <td><span class="cal-cell">12</span></td>
+                <td><span class="cal-cell">13</span></td>
+                <td><span class="cal-cell">14</span></td>
+                <td><span class="cal-cell">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell cal-weekend">17</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">18</span></td>
+                <td><span class="cal-cell">19</span></td>
+                <td><span class="cal-cell">20</span></td>
+                <td><span class="cal-cell">21</span></td>
+                <td><span class="cal-cell">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell cal-weekend">24</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">25</span></td>
+                <td><span class="cal-cell">26</span></td>
+                <td><span class="cal-cell">27</span></td>
+                <td><span class="cal-cell">28</span></td>
+                <td><span class="cal-cell">29</span></td>
+                <td><span class="cal-cell">30</span></td>
+                <td><span class="cal-cell cal-weekend">31</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="January 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // January 2026</span>
+        <h3 class="panel-heading">Important Dates in January 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for January 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">JAN 1, 2026 (THURSDAY)</span>
+            <h4 class="date-title">New Year's Day</h4>
+            <p class="date-desc">Regular national holiday welcoming the calendar year 2026.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 02 - February 2026 View -->
+    <article id="view-m02" class="cal-single-view" aria-label="February 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m01" class="cal-arrow-btn" aria-label="Previous month: &larr; JAN">&larr; JAN</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">02 // FEBRUARY 2026</span>
+            <h2 class="calendar-month-title">February 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 28 Days</span>
+          </div>
+          <label for="cal-m03" class="cal-arrow-btn" aria-label="Next month: MAR &rarr;">MAR &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="February 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>February 2026 Calendar showing 28 days starting on Sunday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell">3</span></td>
+                <td><span class="cal-cell">4</span></td>
+                <td><span class="cal-cell">5</span></td>
+                <td><span class="cal-cell">6</span></td>
+                <td><span class="cal-cell cal-weekend">7</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">8</span></td>
+                <td><span class="cal-cell">9</span></td>
+                <td><span class="cal-cell">10</span></td>
+                <td><span class="cal-cell">11</span></td>
+                <td><span class="cal-cell">12</span></td>
+                <td><span class="cal-cell">13</span></td>
+                <td><span class="cal-cell cal-weekend">14</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell">17</span></td>
+                <td><span class="cal-cell">18</span></td>
+                <td><span class="cal-cell">19</span></td>
+                <td><span class="cal-cell">20</span></td>
+                <td><span class="cal-cell cal-weekend">21</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell">24</span></td>
+                <td><span class="cal-cell">25</span></td>
+                <td><span class="cal-cell">26</span></td>
+                <td><span class="cal-cell">27</span></td>
+                <td><span class="cal-cell cal-weekend">28</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="February 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // February 2026</span>
+        <h3 class="panel-heading">Important Dates in February 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for February 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">FEB 25, 2026 (WEDNESDAY)</span>
+            <h4 class="date-title">EDSA People Power Revolution Anniversary</h4>
+            <p class="date-desc">Special national non-working holiday commemorating the 1986 EDSA Revolution.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 03 - March 2026 View -->
+    <article id="view-m03" class="cal-single-view" aria-label="March 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m02" class="cal-arrow-btn" aria-label="Previous month: &larr; FEB">&larr; FEB</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">03 // MARCH 2026</span>
+            <h2 class="calendar-month-title">March 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 31 Days</span>
+          </div>
+          <label for="cal-m04" class="cal-arrow-btn" aria-label="Next month: APR &rarr;">APR &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="March 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>March 2026 Calendar showing 31 days starting on Sunday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell">3</span></td>
+                <td><span class="cal-cell">4</span></td>
+                <td><span class="cal-cell">5</span></td>
+                <td><span class="cal-cell">6</span></td>
+                <td><span class="cal-cell cal-weekend">7</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">8</span></td>
+                <td><span class="cal-cell">9</span></td>
+                <td><span class="cal-cell">10</span></td>
+                <td><span class="cal-cell">11</span></td>
+                <td><span class="cal-cell">12</span></td>
+                <td><span class="cal-cell">13</span></td>
+                <td><span class="cal-cell cal-weekend">14</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell">17</span></td>
+                <td><span class="cal-cell">18</span></td>
+                <td><span class="cal-cell">19</span></td>
+                <td><span class="cal-cell">20</span></td>
+                <td><span class="cal-cell cal-weekend">21</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell">24</span></td>
+                <td><span class="cal-cell">25</span></td>
+                <td><span class="cal-cell">26</span></td>
+                <td><span class="cal-cell">27</span></td>
+                <td><span class="cal-cell cal-weekend">28</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">29</span></td>
+                <td><span class="cal-cell">30</span></td>
+                <td><span class="cal-cell">31</span></td>
+                <td><span class="cal-cell cal-other">1</span></td>
+                <td><span class="cal-cell cal-other">2</span></td>
+                <td><span class="cal-cell cal-other">3</span></td>
+                <td><span class="cal-cell cal-weekend cal-other">4</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="March 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // March 2026</span>
+        <h3 class="panel-heading">Important Dates in March 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for March 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">MAR 20, 2026 (FRIDAY)</span>
+            <h4 class="date-title">Midterm Examination Review</h4>
+            <p class="date-desc">First-semester academic midterm coursework milestone and evaluation.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 04 - April 2026 View -->
+    <article id="view-m04" class="cal-single-view" aria-label="April 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m03" class="cal-arrow-btn" aria-label="Previous month: &larr; MAR">&larr; MAR</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">04 // APRIL 2026</span>
+            <h2 class="calendar-month-title">April 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 30 Days</span>
+          </div>
+          <label for="cal-m05" class="cal-arrow-btn" aria-label="Next month: MAY &rarr;">MAY &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="April 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>April 2026 Calendar showing 30 days starting on Wednesday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend cal-other">29</span></td>
+                <td><span class="cal-cell cal-other">30</span></td>
+                <td><span class="cal-cell cal-other">31</span></td>
+                <td><span class="cal-cell">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell">3</span></td>
+                <td><span class="cal-cell cal-weekend">4</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">5</span></td>
+                <td><span class="cal-cell">6</span></td>
+                <td><span class="cal-cell">7</span></td>
+                <td><span class="cal-cell">8</span></td>
+                <td><span class="cal-cell">9</span></td>
+                <td><span class="cal-cell">10</span></td>
+                <td><span class="cal-cell cal-weekend">11</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">12</span></td>
+                <td><span class="cal-cell">13</span></td>
+                <td><span class="cal-cell">14</span></td>
+                <td><span class="cal-cell">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell">17</span></td>
+                <td><span class="cal-cell cal-weekend">18</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">19</span></td>
+                <td><span class="cal-cell">20</span></td>
+                <td><span class="cal-cell">21</span></td>
+                <td><span class="cal-cell">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell">24</span></td>
+                <td><span class="cal-cell cal-weekend">25</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">26</span></td>
+                <td><span class="cal-cell">27</span></td>
+                <td><span class="cal-cell">28</span></td>
+                <td><span class="cal-cell">29</span></td>
+                <td><span class="cal-cell">30</span></td>
+                <td><span class="cal-cell cal-other">1</span></td>
+                <td><span class="cal-cell cal-weekend cal-other">2</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="April 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // April 2026</span>
+        <h3 class="panel-heading">Important Dates in April 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for April 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">APR 9, 2026 (THURSDAY)</span>
+            <h4 class="date-title">Day of Valor (Araw ng Kagitingan)</h4>
+            <p class="date-desc">Regular national holiday honoring military veterans and national heroes.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 05 - May 2026 View -->
+    <article id="view-m05" class="cal-single-view" aria-label="May 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m04" class="cal-arrow-btn" aria-label="Previous month: &larr; APR">&larr; APR</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">05 // MAY 2026</span>
+            <h2 class="calendar-month-title">May 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 31 Days</span>
+          </div>
+          <label for="cal-m06" class="cal-arrow-btn" aria-label="Next month: JUN &rarr;">JUN &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="May 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>May 2026 Calendar showing 31 days starting on Friday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend cal-other">26</span></td>
+                <td><span class="cal-cell cal-other">27</span></td>
+                <td><span class="cal-cell cal-other">28</span></td>
+                <td><span class="cal-cell cal-other">29</span></td>
+                <td><span class="cal-cell cal-other">30</span></td>
+                <td><span class="cal-cell">1</span></td>
+                <td><span class="cal-cell cal-weekend">2</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">3</span></td>
+                <td><span class="cal-cell">4</span></td>
+                <td><span class="cal-cell">5</span></td>
+                <td><span class="cal-cell">6</span></td>
+                <td><span class="cal-cell">7</span></td>
+                <td><span class="cal-cell">8</span></td>
+                <td><span class="cal-cell cal-weekend">9</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">10</span></td>
+                <td><span class="cal-cell">11</span></td>
+                <td><span class="cal-cell">12</span></td>
+                <td><span class="cal-cell">13</span></td>
+                <td><span class="cal-cell">14</span></td>
+                <td><span class="cal-cell">15</span></td>
+                <td><span class="cal-cell cal-weekend">16</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">17</span></td>
+                <td><span class="cal-cell">18</span></td>
+                <td><span class="cal-cell">19</span></td>
+                <td><span class="cal-cell">20</span></td>
+                <td><span class="cal-cell">21</span></td>
+                <td><span class="cal-cell">22</span></td>
+                <td><span class="cal-cell cal-weekend">23</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">24</span></td>
+                <td><span class="cal-cell">25</span></td>
+                <td><span class="cal-cell">26</span></td>
+                <td><span class="cal-cell">27</span></td>
+                <td><span class="cal-cell">28</span></td>
+                <td><span class="cal-cell">29</span></td>
+                <td><span class="cal-cell cal-weekend">30</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">31</span></td>
+                <td><span class="cal-cell cal-other">1</span></td>
+                <td><span class="cal-cell cal-other">2</span></td>
+                <td><span class="cal-cell cal-other">3</span></td>
+                <td><span class="cal-cell cal-other">4</span></td>
+                <td><span class="cal-cell cal-other">5</span></td>
+                <td><span class="cal-cell cal-weekend cal-other">6</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="May 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // May 2026</span>
+        <h3 class="panel-heading">Important Dates in May 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for May 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">MAY 1, 2026 (FRIDAY)</span>
+            <h4 class="date-title">Labor Day</h4>
+            <p class="date-desc">Regular national holiday celebrating the contributions of workers nationwide.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 06 - June 2026 View -->
+    <article id="view-m06" class="cal-single-view" aria-label="June 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m05" class="cal-arrow-btn" aria-label="Previous month: &larr; MAY">&larr; MAY</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">06 // JUNE 2026</span>
+            <h2 class="calendar-month-title">June 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 30 Days</span>
+          </div>
+          <label for="cal-m07" class="cal-arrow-btn" aria-label="Next month: JUL &rarr;">JUL &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="June 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>June 2026 Calendar showing 30 days starting on Monday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend cal-other">31</span></td>
+                <td><span class="cal-cell">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell">3</span></td>
+                <td><span class="cal-cell">4</span></td>
+                <td><span class="cal-cell">5</span></td>
+                <td><span class="cal-cell cal-weekend">6</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">7</span></td>
+                <td><span class="cal-cell">8</span></td>
+                <td><span class="cal-cell">9</span></td>
+                <td><span class="cal-cell">10</span></td>
+                <td><span class="cal-cell">11</span></td>
+                <td><span class="cal-cell">12</span></td>
+                <td><span class="cal-cell cal-weekend">13</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">14</span></td>
+                <td><span class="cal-cell">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell">17</span></td>
+                <td><span class="cal-cell">18</span></td>
+                <td><span class="cal-cell">19</span></td>
+                <td><span class="cal-cell cal-weekend">20</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">21</span></td>
+                <td><span class="cal-cell">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell">24</span></td>
+                <td><span class="cal-cell">25</span></td>
+                <td><span class="cal-cell">26</span></td>
+                <td><span class="cal-cell cal-weekend">27</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">28</span></td>
+                <td><span class="cal-cell">29</span></td>
+                <td><span class="cal-cell">30</span></td>
+                <td><span class="cal-cell cal-other">1</span></td>
+                <td><span class="cal-cell cal-other">2</span></td>
+                <td><span class="cal-cell cal-other">3</span></td>
+                <td><span class="cal-cell cal-weekend cal-other">4</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="June 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // June 2026</span>
+        <h3 class="panel-heading">Important Dates in June 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for June 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">JUN 12, 2026 (FRIDAY)</span>
+            <h4 class="date-title">Philippine Independence Day</h4>
+            <p class="date-desc">Regular national holiday commemorating the declaration of Philippine independence.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 07 - July 2026 View -->
+    <article id="view-m07" class="cal-single-view" aria-label="July 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m06" class="cal-arrow-btn" aria-label="Previous month: &larr; JUN">&larr; JUN</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">07 // JULY 2026</span>
+            <h2 class="calendar-month-title">July 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 31 Days</span>
+          </div>
+          <label for="cal-m08" class="cal-arrow-btn" aria-label="Next month: AUG &rarr;">AUG &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="July 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>July 2026 Calendar showing 31 days starting on Wednesday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend cal-other">28</span></td>
+                <td><span class="cal-cell cal-other">29</span></td>
+                <td><span class="cal-cell cal-other">30</span></td>
+                <td><span class="cal-cell">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell">3</span></td>
+                <td><span class="cal-cell cal-weekend">4</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">5</span></td>
+                <td><span class="cal-cell">6</span></td>
+                <td><span class="cal-cell">7</span></td>
+                <td><span class="cal-cell">8</span></td>
+                <td><span class="cal-cell">9</span></td>
+                <td><span class="cal-cell">10</span></td>
+                <td><span class="cal-cell cal-weekend">11</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">12</span></td>
+                <td><span class="cal-cell">13</span></td>
+                <td><span class="cal-cell">14</span></td>
+                <td><span class="cal-cell">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell">17</span></td>
+                <td><span class="cal-cell cal-weekend">18</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">19</span></td>
+                <td><span class="cal-cell">20</span></td>
+                <td><span class="cal-cell">21</span></td>
+                <td><span class="cal-cell">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell">24</span></td>
+                <td><span class="cal-cell cal-weekend">25</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">26</span></td>
+                <td><span class="cal-cell">27</span></td>
+                <td><span class="cal-cell">28</span></td>
+                <td><span class="cal-cell">29</span></td>
+                <td><span class="cal-cell">30</span></td>
+                <td><span class="cal-cell">31</span></td>
+                <td><span class="cal-cell cal-weekend cal-other">1</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="July 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // July 2026</span>
+        <h3 class="panel-heading">Important Dates in July 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for July 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">JUL 24, 2026 (FRIDAY)</span>
+            <h4 class="date-title">Pre-Enrollment Preparation</h4>
+            <p class="date-desc">University of Makati student enrollment advisement and course registration.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 08 - August 2026 View -->
+    <article id="view-m08" class="cal-single-view" aria-label="August 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m07" class="cal-arrow-btn" aria-label="Previous month: &larr; JUL">&larr; JUL</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">08 // AUGUST 2026</span>
+            <h2 class="calendar-month-title">August 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 31 Days</span>
+          </div>
+          <label for="cal-m09" class="cal-arrow-btn" aria-label="Next month: SEP &rarr;">SEP &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="August 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>August 2026 Calendar showing 31 days starting on Saturday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend cal-other">26</span></td>
+                <td><span class="cal-cell cal-other">27</span></td>
+                <td><span class="cal-cell cal-other">28</span></td>
+                <td><span class="cal-cell cal-other">29</span></td>
+                <td><span class="cal-cell cal-other">30</span></td>
+                <td><span class="cal-cell cal-other">31</span></td>
+                <td><span class="cal-cell cal-weekend">1</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">2</span></td>
+                <td><span class="cal-cell">3</span></td>
+                <td><span class="cal-cell">4</span></td>
+                <td><span class="cal-cell">5</span></td>
+                <td><span class="cal-cell">6</span></td>
+                <td><span class="cal-cell">7</span></td>
+                <td><span class="cal-cell cal-weekend">8</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">9</span></td>
+                <td><span class="cal-cell">10</span></td>
+                <td><span class="cal-cell">11</span></td>
+                <td><span class="cal-cell">12</span></td>
+                <td><span class="cal-cell">13</span></td>
+                <td><span class="cal-cell">14</span></td>
+                <td><span class="cal-cell cal-weekend">15</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">16</span></td>
+                <td><span class="cal-cell">17</span></td>
+                <td><span class="cal-cell">18</span></td>
+                <td><span class="cal-cell">19</span></td>
+                <td><span class="cal-cell">20</span></td>
+                <td><span class="cal-cell">21</span></td>
+                <td><span class="cal-cell cal-weekend">22</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">23</span></td>
+                <td><span class="cal-cell">24</span></td>
+                <td><span class="cal-cell">25</span></td>
+                <td><span class="cal-cell">26</span></td>
+                <td><span class="cal-cell">27</span></td>
+                <td><span class="cal-cell">28</span></td>
+                <td><span class="cal-cell cal-weekend">29</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">30</span></td>
+                <td><span class="cal-cell">31</span></td>
+                <td><span class="cal-cell cal-other">1</span></td>
+                <td><span class="cal-cell cal-other">2</span></td>
+                <td><span class="cal-cell cal-other">3</span></td>
+                <td><span class="cal-cell cal-other">4</span></td>
+                <td><span class="cal-cell cal-weekend cal-other">5</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="August 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // August 2026</span>
+        <h3 class="panel-heading">Important Dates in August 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for August 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">AUG 31, 2026 (MONDAY)</span>
+            <h4 class="date-title">National Heroes Day / Semester Opening</h4>
+            <p class="date-desc">National holiday and official commencement of first-semester academic classes.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 09 - September 2026 View -->
+    <article id="view-m09" class="cal-single-view" aria-label="September 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m08" class="cal-arrow-btn" aria-label="Previous month: &larr; AUG">&larr; AUG</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">09 // SEPTEMBER 2026</span>
+            <h2 class="calendar-month-title">September 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 30 Days</span>
+          </div>
+          <label for="cal-m10" class="cal-arrow-btn" aria-label="Next month: OCT &rarr;">OCT &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="September 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>September 2026 Calendar showing 30 days starting on Tuesday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend cal-other">30</span></td>
+                <td><span class="cal-cell cal-other">31</span></td>
+                <td><span class="cal-cell">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell">3</span></td>
+                <td><span class="cal-cell">4</span></td>
+                <td><span class="cal-cell cal-weekend">5</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">6</span></td>
+                <td><span class="cal-cell">7</span></td>
+                <td><span class="cal-cell">8</span></td>
+                <td><span class="cal-cell">9</span></td>
+                <td><span class="cal-cell">10</span></td>
+                <td><span class="cal-cell">11</span></td>
+                <td><span class="cal-cell cal-weekend">12</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">13</span></td>
+                <td><span class="cal-cell">14</span></td>
+                <td><span class="cal-cell">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell">17</span></td>
+                <td><span class="cal-cell">18</span></td>
+                <td><span class="cal-cell cal-weekend">19</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">20</span></td>
+                <td><span class="cal-cell">21</span></td>
+                <td><span class="cal-cell">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell">24</span></td>
+                <td><span class="cal-cell">25</span></td>
+                <td><span class="cal-cell cal-weekend">26</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">27</span></td>
+                <td><span class="cal-cell">28</span></td>
+                <td><span class="cal-cell">29</span></td>
+                <td><span class="cal-cell">30</span></td>
+                <td><span class="cal-cell cal-other">1</span></td>
+                <td><span class="cal-cell cal-other">2</span></td>
+                <td><span class="cal-cell cal-weekend cal-other">3</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="September 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // September 2026</span>
+        <h3 class="panel-heading">Important Dates in September 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for September 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">SEP 21, 2026 (MONDAY)</span>
+            <h4 class="date-title">Preliminary Subject Assessments</h4>
+            <p class="date-desc">First assessment period for IT foundation courses and laboratory modules.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 10 - October 2026 View -->
+    <article id="view-m10" class="cal-single-view" aria-label="October 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m09" class="cal-arrow-btn" aria-label="Previous month: &larr; SEP">&larr; SEP</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">10 // OCTOBER 2026</span>
+            <h2 class="calendar-month-title">October 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 31 Days</span>
+          </div>
+          <label for="cal-m11" class="cal-arrow-btn" aria-label="Next month: NOV &rarr;">NOV &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="October 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>October 2026 Calendar showing 31 days starting on Thursday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend cal-other">27</span></td>
+                <td><span class="cal-cell cal-other">28</span></td>
+                <td><span class="cal-cell cal-other">29</span></td>
+                <td><span class="cal-cell cal-other">30</span></td>
+                <td><span class="cal-cell">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell cal-weekend">3</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">4</span></td>
+                <td><span class="cal-cell">5</span></td>
+                <td><span class="cal-cell">6</span></td>
+                <td><span class="cal-cell">7</span></td>
+                <td><span class="cal-cell">8</span></td>
+                <td><span class="cal-cell">9</span></td>
+                <td><span class="cal-cell cal-weekend">10</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">11</span></td>
+                <td><span class="cal-cell">12</span></td>
+                <td><span class="cal-cell">13</span></td>
+                <td><span class="cal-cell">14</span></td>
+                <td><span class="cal-cell">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell cal-weekend">17</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">18</span></td>
+                <td><span class="cal-cell">19</span></td>
+                <td><span class="cal-cell">20</span></td>
+                <td><span class="cal-cell">21</span></td>
+                <td><span class="cal-cell">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell cal-weekend">24</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">25</span></td>
+                <td><span class="cal-cell">26</span></td>
+                <td><span class="cal-cell">27</span></td>
+                <td><span class="cal-cell">28</span></td>
+                <td><span class="cal-cell">29</span></td>
+                <td><span class="cal-cell">30</span></td>
+                <td><span class="cal-cell cal-weekend">31</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="October 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // October 2026</span>
+        <h3 class="panel-heading">Important Dates in October 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for October 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">OCT 31, 2026 (SATURDAY)</span>
+            <h4 class="date-title">Midterm Project Completion</h4>
+            <p class="date-desc">Submission and faculty evaluation of midterm web development milestones.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 11 - November 2026 View -->
+    <article id="view-m11" class="cal-single-view" aria-label="November 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m10" class="cal-arrow-btn" aria-label="Previous month: &larr; OCT">&larr; OCT</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">11 // NOVEMBER 2026</span>
+            <h2 class="calendar-month-title">November 2026</h2>
+            <span class="calendar-badge">Current Date: Monday, Nov 9, 2026</span>
+          </div>
+          <label for="cal-m12" class="cal-arrow-btn" aria-label="Next month: DEC &rarr;">DEC &rarr;</label>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="November 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>November 2026 Calendar showing 30 days starting on Sunday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell">3</span></td>
+                <td><span class="cal-cell">4</span></td>
+                <td><span class="cal-cell">5</span></td>
+                <td><span class="cal-cell">6</span></td>
+                <td><span class="cal-cell cal-weekend">7</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">8</span></td>
+                <td><span class="cal-cell cal-today" aria-current="date">9<span class="cal-sub-label">Today</span></span></td>
+                <td><span class="cal-cell">10</span></td>
+                <td><span class="cal-cell">11</span></td>
+                <td><span class="cal-cell">12</span></td>
+                <td><span class="cal-cell">13</span></td>
+                <td><span class="cal-cell cal-weekend">14</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell">17</span></td>
+                <td><span class="cal-cell">18</span></td>
+                <td><span class="cal-cell">19</span></td>
+                <td><span class="cal-cell">20</span></td>
+                <td><span class="cal-cell cal-weekend">21</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell">24</span></td>
+                <td><span class="cal-cell">25</span></td>
+                <td><span class="cal-cell">26</span></td>
+                <td><span class="cal-cell">27</span></td>
+                <td><span class="cal-cell cal-weekend">28</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">29</span></td>
+                <td><span class="cal-cell">30</span></td>
+                <td><span class="cal-cell cal-other">1</span></td>
+                <td><span class="cal-cell cal-other">2</span></td>
+                <td><span class="cal-cell cal-other">3</span></td>
+                <td><span class="cal-cell cal-other">4</span></td>
+                <td><span class="cal-cell cal-weekend cal-other">5</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="November 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // November 2026</span>
+        <h3 class="panel-heading">Important Dates in November 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for November 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">NOV 1, 2026 (SUNDAY)</span>
+            <h4 class="date-title">All Saints' Day</h4>
+            <p class="date-desc">National holiday marking the beginning of the November academic calendar.</p>
+          </li>
+          <li class="date-card">
+            <span class="date-badge">NOV 2, 2026 (MONDAY)</span>
+            <h4 class="date-title">All Souls' Day</h4>
+            <p class="date-desc">Special non-working holiday across all university campuses.</p>
+          </li>
+          <li class="date-card">
+            <span class="date-badge">NOV 9 (MONDAY)</span>
+            <h4 class="date-title">Webpage Progress Review</h4>
+            <p class="date-desc">Active development, code cleanup, and complete verification of all ten activity pages.</p>
+          </li>
+          <li class="date-card">
+            <span class="date-badge">NOV 11 (TUESDAY)</span>
+            <h4 class="date-title">INTCOMP Class Presentation</h4>
+            <p class="date-desc">10-minute presentation per student (1 unit of 8 people) graded on Design, Content, and Functionality.</p>
+          </li>
+          <li class="date-card">
+            <span class="date-badge">NOV 30, 2026 (MONDAY)</span>
+            <h4 class="date-title">Bonifacio Day</h4>
+            <p class="date-desc">Regular national holiday honoring Andres Bonifacio.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Month 12 - December 2026 View -->
+    <article id="view-m12" class="cal-single-view" aria-label="December 2026 Calendar View">
+      <div class="calendar-card">
+        <div class="calendar-top-bar">
+          <label for="cal-m11" class="cal-arrow-btn" aria-label="Previous month: &larr; NOV">&larr; NOV</label>
+          <div class="cal-title-center">
+            <span class="mono-xs text-accent">12 // DECEMBER 2026</span>
+            <h2 class="calendar-month-title">December 2026</h2>
+            <span class="calendar-badge">Academic Schedule // 31 Days</span>
+          </div>
+          <span class="cal-arrow-btn cal-arrow-disabled" aria-hidden="true">NEXT &rarr;</span>
+        </div>
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="December 2026 Monthly Calendar">
+          <table class="calendar-table">
+            <caption>December 2026 Calendar showing 31 days starting on Tuesday</caption>
+            <thead>
+              <tr>
+                <th scope="col">Sun</th>
+                <th scope="col">Mon</th>
+                <th scope="col">Tue</th>
+                <th scope="col">Wed</th>
+                <th scope="col">Thu</th>
+                <th scope="col">Fri</th>
+                <th scope="col">Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="cal-cell cal-weekend cal-other">29</span></td>
+                <td><span class="cal-cell cal-other">30</span></td>
+                <td><span class="cal-cell">1</span></td>
+                <td><span class="cal-cell">2</span></td>
+                <td><span class="cal-cell">3</span></td>
+                <td><span class="cal-cell">4</span></td>
+                <td><span class="cal-cell cal-weekend">5</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">6</span></td>
+                <td><span class="cal-cell">7</span></td>
+                <td><span class="cal-cell">8</span></td>
+                <td><span class="cal-cell">9</span></td>
+                <td><span class="cal-cell">10</span></td>
+                <td><span class="cal-cell">11</span></td>
+                <td><span class="cal-cell cal-weekend">12</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">13</span></td>
+                <td><span class="cal-cell">14</span></td>
+                <td><span class="cal-cell">15</span></td>
+                <td><span class="cal-cell">16</span></td>
+                <td><span class="cal-cell">17</span></td>
+                <td><span class="cal-cell">18</span></td>
+                <td><span class="cal-cell cal-weekend">19</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">20</span></td>
+                <td><span class="cal-cell">21</span></td>
+                <td><span class="cal-cell">22</span></td>
+                <td><span class="cal-cell">23</span></td>
+                <td><span class="cal-cell">24</span></td>
+                <td><span class="cal-cell">25</span></td>
+                <td><span class="cal-cell cal-weekend">26</span></td>
+              </tr>
+              <tr>
+                <td><span class="cal-cell cal-weekend">27</span></td>
+                <td><span class="cal-cell">28</span></td>
+                <td><span class="cal-cell">29</span></td>
+                <td><span class="cal-cell">30</span></td>
+                <td><span class="cal-cell">31</span></td>
+                <td><span class="cal-cell cal-other">1</span></td>
+                <td><span class="cal-cell cal-weekend cal-other">2</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="calendar-legend">
+          <span class="legend-item"><span class="legend-box legend-today"></span> Highlighted Today (Nov 9)</span>
+          <span class="legend-item"><span class="legend-box legend-weekend"></span> Weekend Days (Sun / Sat)</span>
+          <span class="legend-item"><span class="legend-box legend-other"></span> Adjacent Month Days (Muted)</span>
+        </div>
+      </div>
+      <div class="calendar-dates-section" aria-label="December 2026 Academic Milestones">
+        <span class="mono-section-tag">Schedule Record // December 2026</span>
+        <h3 class="panel-heading">Important Dates in December 2026</h3>
+        <p class="panel-sub">Academic schedule milestones, coursework deadlines, and observances for December 2026.</p>
+        <ul class="important-dates-list">
+          <li class="date-card">
+            <span class="date-badge">DEC 25, 2026 (FRIDAY)</span>
+            <h4 class="date-title">Christmas Day</h4>
+            <p class="date-desc">Regular national holiday and start of annual university Christmas recess.</p>
+          </li>
+          <li class="date-card">
+            <span class="date-badge">DEC 30, 2026 (WEDNESDAY)</span>
+            <h4 class="date-title">Rizal Day</h4>
+            <p class="date-desc">Regular national holiday commemorating the life and works of Dr. Jose Rizal.</p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo-row" aria-label="Cyril Jhune Homepage">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+            <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+          </svg>
+          <span>Cyril Jhune C. Canabal</span>
+        </a>
+        <p class="footer-tagline">First-year BSIT student at the University of Makati.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Main Sections</p>
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#photo-video">Photo / Video</a>
+        <a href="index.html#activities">Activities Hub</a>
+        <a href="index.html#contact">Get in Touch</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 01 - 05</p>
+        <a href="calendar.html">01. Calendar</a>
+        <a href="resume.html">02. Resume</a>
+        <a href="table.html">03. Table</a>
+        <a href="font-text.html">04. Font Text</a>
+        <a href="layout.html">05. Layout</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 06 - 10</p>
+        <a href="background.html">06. Background</a>
+        <a href="logo.html">07. Logo</a>
+        <a href="frame.html">08. Frame</a>
+        <a href="button.html">09. Buttons</a>
+        <a href="draft.html">10. Draft</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>(C) 2026 Cyril Jhune C. Canabal.</p>
+      <a href="index.html#activities" class="mono-xs text-accent back-link">Back to Activities Directory</a>
+    </div>
+  </footer>
+</body>
+</html>

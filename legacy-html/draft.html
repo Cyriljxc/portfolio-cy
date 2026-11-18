@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activity 10: Draft - Cyril Jhune Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-top">
+      <a href="index.html#hero" class="brand-link" aria-label="Go to homepage">
+        <svg class="cjc-header-logo" width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+          <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+          <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+        </svg>
+        <span class="brand-surname">CYRIL JHUNE</span>
+        <span class="brand-year">PORTFOLIO / 2026</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <a href="index.html#hero" class="nav-link">HOME</a>
+        <a href="index.html#photo-video" class="nav-link">PHOTO / VIDEO</a>
+        <div class="nav-dropdown">
+          <input type="checkbox" id="nav-act-toggle" class="nav-act-toggle" aria-label="Toggle activities dropdown menu">
+          <div class="nav-act-trigger">
+            <a href="index.html#activities" class="nav-link active">ACTIVITIES</a>
+            <label for="nav-act-toggle" class="nav-act-caret" title="Toggle Activities Menu">+</label>
+          </div>
+          <div class="nav-dropdown-menu">
+            <a href="calendar.html" class="nav-dropdown-item">01. Calendar</a>
+            <a href="resume.html" class="nav-dropdown-item">02. Resume</a>
+            <a href="table.html" class="nav-dropdown-item">03. Table</a>
+            <a href="font-text.html" class="nav-dropdown-item">04. Font Text</a>
+            <a href="layout.html" class="nav-dropdown-item">05. Layout</a>
+            <a href="background.html" class="nav-dropdown-item">06. Background</a>
+            <a href="logo.html" class="nav-dropdown-item">07. Logo</a>
+            <a href="frame.html" class="nav-dropdown-item">08. Frame</a>
+            <a href="button.html" class="nav-dropdown-item">09. Buttons</a>
+            <a href="draft.html" class="nav-dropdown-item">10. Draft</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-controls">
+        <a href="index.html#contact" class="clipped-cta">GET IN TOUCH</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="activity-page-wrap">
+    <div class="activity-page-header">
+      <div class="activity-header-left">
+        <span class="mono-section-tag">Activity 10 // Project Specification</span>
+        <h1 class="activity-page-title">Webpage Specification and Grading Rubric</h1>
+        <p class="activity-page-desc">
+          This page defines the formal evaluation criteria and architectural blueprint for the final Introduction to Computing web portfolio. It outlines the percentage weights for design, content, and functionality.
+        </p>
+      </div>
+      <a href="index.html#activities" class="mono-chip">Back to Activities</a>
+    </div>
+
+    <div class="rubric-layout-grid">
+      <!-- Static Rubric Table -->
+      <section class="rubric-table-card" aria-label="Official Grading Rubric Breakdown">
+        <div class="table-scroll-wrap" tabindex="0" role="region" aria-label="Grading Rubric Table">
+          <table class="data-table">
+            <caption>Official INTCOMP Final Project Evaluation Rubric</caption>
+            <thead>
+              <tr>
+                <th scope="col">Evaluation Criterion</th>
+                <th scope="col">Description and Standards</th>
+                <th scope="col" class="text-right">Weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Design &amp; Presentation</th>
+                <td>
+                  Overall visual appeal, consistent dark theme styling, typographic hierarchy using Geist and Geist Mono, clear negative space, and responsive adaptation across 360px, 768px, and 1280px viewports without horizontal scroll.
+                </td>
+                <td class="text-right text-accent"><strong>50%</strong></td>
+              </tr>
+              <tr>
+                <th scope="row">Content &amp; Completeness</th>
+                <td>
+                  Authentic student facts, complete 11-page structure, real course schedule data, valid image alternate text, complete education timeline with honors, and accurate documentation across all 10 activities.
+                </td>
+                <td class="text-right text-accent"><strong>25%</strong></td>
+              </tr>
+              <tr>
+                <th scope="row">Functionality &amp; Standards</th>
+                <td>
+                  Semantic HTML5 elements, pure CSS3 interactivity (:target lightbox, hover dropdown, print stylesheet), 44px minimum tap targets, zero JavaScript dependencies, and zero broken links across all pages.
+                </td>
+                <td class="text-right text-accent"><strong>25%</strong></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="2">Total Evaluation Score</th>
+                <td class="text-right text-accent"><strong>100%</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <!-- Wireframe Architecture Blueprint -->
+      <section class="wireframe-blueprint-card" aria-label="Website Architecture Blueprint">
+        <div>
+          <span class="mono-section-tag">Information Architecture</span>
+          <h2 class="panel-heading">Website Blueprint Format</h2>
+          <p class="panel-sub">Hierarchical map linking the central hub to all ten activity modules via top navigation and dedicated activity links.</p>
+
+          <div class="blueprint-structure">
+            <div class="bp-node-header">
+              <strong>INDEX.HTML</strong> (Home / Photo &amp; Video / Activities Directory)
+            </div>
+
+            <div class="bp-node-grid">
+              <div class="bp-node-cell">
+                <span class="text-accent">01. Calendar</span><br>
+                <small>Nov 2026 Academic Grid</small>
+              </div>
+              <div class="bp-node-cell">
+                <span class="text-accent">02. Resume</span><br>
+                <small>CV &amp; Print Stylesheet</small>
+              </div>
+              <div class="bp-node-cell">
+                <span class="text-accent">03. Table</span><br>
+                <small>BSIT Schedule &amp; Spans</small>
+              </div>
+              <div class="bp-node-cell">
+                <span class="text-accent">04. Font Text</span><br>
+                <small>Typographic Hierarchy</small>
+              </div>
+              <div class="bp-node-cell">
+                <span class="text-accent">05. Layout</span><br>
+                <small>CSS Grid &amp; Flexbox</small>
+              </div>
+              <div class="bp-node-cell">
+                <span class="text-accent">06. Background</span><br>
+                <small>Surface &amp; Gradients</small>
+              </div>
+              <div class="bp-node-cell">
+                <span class="text-accent">07. Logo</span><br>
+                <small>Inline SVG Badge</small>
+              </div>
+              <div class="bp-node-cell">
+                <span class="text-accent">08. Frame</span><br>
+                <small>Photo Frames &amp; Iframe</small>
+              </div>
+              <div class="bp-node-cell">
+                <span class="text-accent">09. Buttons</span><br>
+                <small>CSS States &amp; Form</small>
+              </div>
+              <div class="bp-node-cell">
+                <span class="text-accent">10. Draft</span><br>
+                <small>Grading Rubric Matrix</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="layout-code-caption">
+          <strong>Coursework Requirements:</strong> 10-minute presentation per student, 1 unit of 8 people, zero client-side scripts, valid responsive HTML5/CSS3.
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-logo-row" aria-label="Cyril Jhune Homepage">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#14151c" stroke="#5b7cff" stroke-width="2"/>
+            <path d="M 26 12 C 17 10 10 14 10 20 C 10 26 17 30 26 28" stroke="#5b7cff" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M 21 11 V 24 C 21 27 18 29 14 29" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+            <circle cx="27" cy="20" r="2" fill="#5b7cff"/>
+          </svg>
+          <span>Cyril Jhune C. Canabal</span>
+        </a>
+        <p class="footer-tagline">First-year BSIT student at the University of Makati.</p>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Main Sections</p>
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#photo-video">Photo / Video</a>
+        <a href="index.html#activities">Activities Hub</a>
+        <a href="index.html#contact">Get in Touch</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 01 - 05</p>
+        <a href="calendar.html">01. Calendar</a>
+        <a href="resume.html">02. Resume</a>
+        <a href="table.html">03. Table</a>
+        <a href="font-text.html">04. Font Text</a>
+        <a href="layout.html">05. Layout</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="footer-head">Activities 06 - 10</p>
+        <a href="background.html">06. Background</a>
+        <a href="logo.html">07. Logo</a>
+        <a href="frame.html">08. Frame</a>
+        <a href="button.html">09. Buttons</a>
+        <a href="draft.html">10. Draft</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>(C) 2026 Cyril Jhune C. Canabal.</p>
+      <a href="index.html#activities" class="mono-xs text-accent back-link">Back to Activities Directory</a>
+    </div>
+  </footer>
+</body>
+</html>
