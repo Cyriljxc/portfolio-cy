@@ -21,6 +21,15 @@ const config: Config = {
         sans: ["var(--font-geist-sans)", "system-ui", "-apple-system", "sans-serif"],
         mono: ["var(--font-geist-mono)", "ui-monospace", "monospace"],
       },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 28s linear infinite",
+      },
     },
   },
   plugins: [],

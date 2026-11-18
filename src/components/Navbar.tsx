@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import CjcLogo from "./CjcLogo";
 import ThemeToggle from "./ThemeToggle";
+import CommandMenu from "./CommandMenu";
 import { ChevronDown, Menu, X, Calendar, FileText, Table, Type, Layout, Palette, Sparkles, Box, Square, Layers, ArrowUpRight } from "lucide-react";
 
 const activities = [
@@ -36,8 +37,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-40 w-full bg-white/90 dark:bg-slate-950/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
         {/* Brand Link */}
         <Link
           href="/"
@@ -130,6 +131,9 @@ export default function Navbar() {
 
         {/* Header Right Actions */}
         <div className="flex items-center gap-2">
+          {/* Interactive ⌘K Command Search (Inspired by Gabriel Siva) */}
+          <CommandMenu />
+
           {/* Light / Dark Mode Toggle */}
           <ThemeToggle />
 
