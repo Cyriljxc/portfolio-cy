@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, Table, CheckCircle2, Award, BookOpen } from "lucide-react";
+import { ArrowLeft, Table, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "Activity 03: Curriculum & Grade Table — Cyril Jhune",
-  description: "Semantic data table displaying first-year BSIT courses, unit distribution, schedule, and grade status.",
+  title: "Activity 03: Subject Schedule & Grades — Cyril Jhune",
+  description: "Table displaying first-year BSIT subjects, units, schedules, and grades.",
 };
 
 const subjects = [
@@ -22,68 +22,64 @@ export default function TableActivityPage() {
   const totalUnits = subjects.reduce((sum, s) => sum + s.units, 0);
 
   return (
-    <div className="py-12 bg-white min-h-screen">
+    <div className="py-12 bg-white dark:bg-slate-950 min-h-screen transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Breadcrumb Navigation */}
         <Link
           href="/#activities"
-          className="inline-flex items-center gap-2 text-xs font-mono font-bold text-slate-500 hover:text-blue-600 transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-mono font-bold text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
         >
           <ArrowLeft size={14} />
-          <span>BACK TO ACTIVITIES DIRECTORY</span>
+          <span>BACK TO ACTIVITIES</span>
         </Link>
 
         {/* Header */}
-        <div className="space-y-3 border-b border-slate-200 pb-6">
-          <div className="inline-flex items-center gap-2 font-mono text-xs font-bold text-blue-600 uppercase tracking-widest">
+        <div className="space-y-3 border-b border-slate-200 dark:border-slate-800 pb-6">
+          <div className="inline-flex items-center gap-2 font-mono text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
             <Table size={14} />
-            <span>ACTIVITY 03 // DATA TABLES &amp; STRUCTURING</span>
+            <span>ACTIVITY 03 • DATA TABLES</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-            BSIT CURRICULUM &amp; GRADE MATRIX
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            BSIT SCHEDULE &amp; GRADES TABLE
           </h1>
-          <p className="text-sm sm:text-base text-slate-600 font-sans max-w-2xl">
-            Structured semantic HTML5 table displaying first-year BSIT subject loads, laboratory allocations, scheduling periods, and academic performance grading rubrics at the University of Makati.
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-sans max-w-2xl">
+            A semantic table listing first-year BSIT subject loads, credit units, rooms, and schedule times at the University of Makati.
           </p>
         </div>
 
         {/* Summary Stat Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <div className="text-xs font-mono text-slate-500 uppercase">Total Subjects</div>
-            <div className="text-2xl font-black text-slate-900 mt-1">{subjects.length} Courses</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase">Total Subjects</div>
+            <div className="text-2xl font-black text-slate-900 dark:text-white mt-1">{subjects.length} Subjects</div>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <div className="text-xs font-mono text-slate-500 uppercase">Enrolled Units</div>
-            <div className="text-2xl font-black text-blue-600 mt-1">{totalUnits} Credit Units</div>
+          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase">Enrolled Units</div>
+            <div className="text-2xl font-black text-blue-600 dark:text-blue-400 mt-1">{totalUnits} Credit Units</div>
           </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <div className="text-xs font-mono text-slate-500 uppercase">Term Weighted GPA</div>
-            <div className="text-2xl font-black text-emerald-600 mt-1">1.22 (Excellent)</div>
-          </div>
-          <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <div className="text-xs font-mono text-slate-500 uppercase">Academic Standing</div>
-            <div className="text-2xl font-black text-slate-900 mt-1">President's List</div>
+          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div className="text-xs font-mono text-slate-500 dark:text-slate-400 uppercase">Status</div>
+            <div className="text-2xl font-black text-emerald-600 dark:text-emerald-400 mt-1">Completed (Passed)</div>
           </div>
         </div>
 
         {/* Table Container */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-          <div className="px-6 py-4 bg-slate-50/80 border-b border-slate-200 flex items-center justify-between">
-            <span className="font-mono text-xs font-bold text-slate-800 uppercase tracking-wider">
-              First Year // First Semester Academic Load
+        <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+          <div className="px-6 py-4 bg-slate-50/80 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+            <span className="font-mono text-xs font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider">
+              First Year • First Semester
             </span>
-            <span className="font-mono text-xs text-blue-600 font-semibold">
-              Academic Year 2025 - 2026
+            <span className="font-mono text-xs text-blue-600 dark:text-blue-400 font-semibold">
+              AY 2025–2026
             </span>
           </div>
 
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs font-sans">
-              <thead className="bg-slate-100/70 border-b border-slate-200 font-mono uppercase text-[11px] text-slate-600 tracking-wider">
+              <thead className="bg-slate-100/70 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 font-mono uppercase text-[11px] text-slate-600 dark:text-slate-400 tracking-wider">
                 <tr>
-                  <th className="py-3.5 px-4 font-bold">Course Code</th>
-                  <th className="py-3.5 px-4 font-bold">Descriptive Title</th>
+                  <th className="py-3.5 px-4 font-bold">Code</th>
+                  <th className="py-3.5 px-4 font-bold">Subject Title</th>
                   <th className="py-3.5 px-3 font-bold text-center">Lec</th>
                   <th className="py-3.5 px-3 font-bold text-center">Lab</th>
                   <th className="py-3.5 px-3 font-bold text-center">Units</th>
@@ -93,21 +89,21 @@ export default function TableActivityPage() {
                   <th className="py-3.5 px-4 font-bold text-center">Status</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100">
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                 {subjects.map((s) => (
-                  <tr key={s.code} className="hover:bg-blue-50/40 transition-colors">
-                    <td className="py-3.5 px-4 font-mono font-bold text-blue-600">{s.code}</td>
-                    <td className="py-3.5 px-4 font-semibold text-slate-900">{s.title}</td>
-                    <td className="py-3.5 px-3 text-center text-slate-600 font-mono">{s.lec}</td>
-                    <td className="py-3.5 px-3 text-center text-slate-600 font-mono">{s.lab}</td>
-                    <td className="py-3.5 px-3 text-center font-bold text-slate-900 font-mono">{s.units}</td>
-                    <td className="py-3.5 px-4 text-slate-600 font-mono text-[11px]">{s.schedule}</td>
-                    <td className="py-3.5 px-3 text-center font-mono text-slate-500">{s.room}</td>
-                    <td className="py-3.5 px-4 text-center font-mono font-bold text-slate-900 bg-slate-50/50">
+                  <tr key={s.code} className="hover:bg-blue-50/40 dark:hover:bg-slate-800/40 transition-colors">
+                    <td className="py-3.5 px-4 font-mono font-bold text-blue-600 dark:text-blue-400">{s.code}</td>
+                    <td className="py-3.5 px-4 font-semibold text-slate-900 dark:text-white">{s.title}</td>
+                    <td className="py-3.5 px-3 text-center text-slate-600 dark:text-slate-400 font-mono">{s.lec}</td>
+                    <td className="py-3.5 px-3 text-center text-slate-600 dark:text-slate-400 font-mono">{s.lab}</td>
+                    <td className="py-3.5 px-3 text-center font-bold text-slate-900 dark:text-white font-mono">{s.units}</td>
+                    <td className="py-3.5 px-4 text-slate-600 dark:text-slate-400 font-mono text-[11px]">{s.schedule}</td>
+                    <td className="py-3.5 px-3 text-center font-mono text-slate-500 dark:text-slate-400">{s.room}</td>
+                    <td className="py-3.5 px-4 text-center font-mono font-bold text-slate-900 dark:text-white bg-slate-50/50 dark:bg-slate-800/50">
                       {s.grade}
                     </td>
                     <td className="py-3.5 px-4 text-center">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
                         <CheckCircle2 size={12} />
                         <span>{s.status}</span>
                       </span>
@@ -115,16 +111,16 @@ export default function TableActivityPage() {
                   </tr>
                 ))}
               </tbody>
-              <tfoot className="bg-slate-50 border-t border-slate-200 font-mono font-bold text-xs text-slate-900">
+              <tfoot className="bg-slate-50 dark:bg-slate-800/80 border-t border-slate-200 dark:border-slate-700 font-mono font-bold text-xs text-slate-900 dark:text-white">
                 <tr>
                   <td colSpan={4} className="py-4 px-4 text-right uppercase tracking-wider">
-                    Total Academic Credit Units:
+                    Total Units:
                   </td>
-                  <td className="py-4 px-3 text-center text-blue-600 font-black text-sm">
+                  <td className="py-4 px-3 text-center text-blue-600 dark:text-blue-400 font-black text-sm">
                     {totalUnits}
                   </td>
-                  <td colSpan={4} className="py-4 px-4 text-right text-slate-500 text-[11px]">
-                    Evaluation Status: Verified by College Registrar
+                  <td colSpan={4} className="py-4 px-4 text-right text-slate-500 dark:text-slate-400 text-[11px]">
+                    University of Makati • CCIS
                   </td>
                 </tr>
               </tfoot>

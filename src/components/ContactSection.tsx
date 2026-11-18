@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Globe, MapPin, Send, ArrowUpRight, GraduationCap } from "lucide-react";
+import { Mail, Globe, MapPin, ArrowUpRight, GraduationCap } from "lucide-react";
 
 function GithubIcon({ size = 24 }: { size?: number }) {
   return (
@@ -12,19 +12,19 @@ function GithubIcon({ size = 24 }: { size?: number }) {
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="w-full bg-slate-50 py-16 md:py-24">
+    <section id="contact" className="w-full bg-slate-50 dark:bg-slate-900/40 py-16 md:py-24 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Section Header */}
         <div className="space-y-3">
-          <div className="inline-flex items-center gap-2 font-mono text-xs font-bold text-blue-600 uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 font-mono text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
             <Mail size={14} />
-            <span>COMMUNICATION // GET IN TOUCH</span>
+            <span>CONTACT</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-            CONNECT &amp; INQUIRE
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+            GET IN TOUCH
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 font-sans max-w-2xl">
-            Have questions regarding this portfolio, academic coursework, or collaborative development opportunities? Feel free to reach out directly through the official student channels below.
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-sans max-w-2xl">
+            Feel free to connect or view my code repositories and projects through the links below.
           </p>
         </div>
 
@@ -35,26 +35,26 @@ export default function ContactSection() {
             href="https://github.com/Cyriljxc"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-400 transition-all flex flex-col justify-between"
+            className="group bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-blue-400 dark:hover:border-blue-500 transition-all flex flex-col justify-between"
           >
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 group-hover:bg-blue-600 group-hover:text-white transition-colors flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white group-hover:bg-blue-600 group-hover:text-white transition-colors flex items-center justify-center">
                 <GithubIcon size={24} />
               </div>
               <div className="space-y-1">
-                <div className="text-xs font-mono text-slate-400 uppercase tracking-wider font-semibold">
-                  Source Control
+                <div className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider font-semibold">
+                  GitHub Profile
                 </div>
-                <div className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   github.com/Cyriljxc
                 </div>
               </div>
-              <p className="text-xs text-slate-500 font-sans leading-relaxed">
-                Explore public repositories, code commits, class projects, and open-source contributions.
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+                Check out my repositories, course projects, and latest code updates.
               </p>
             </div>
-            <div className="pt-4 mt-4 border-t border-slate-100 flex items-center gap-1 font-mono text-xs font-bold text-blue-600">
-              <span>View GitHub Profile</span>
+            <div className="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-1 font-mono text-xs font-bold text-blue-600 dark:text-blue-400">
+              <span>View GitHub</span>
               <ArrowUpRight size={14} />
             </div>
           </a>
@@ -64,51 +64,51 @@ export default function ContactSection() {
             href="https://vercel.com/canabalcyriljhune-7338"
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-400 transition-all flex flex-col justify-between"
+            className="group bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-blue-400 dark:hover:border-blue-500 transition-all flex flex-col justify-between"
           >
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-slate-100 text-slate-900 group-hover:bg-blue-600 group-hover:text-white transition-colors flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white group-hover:bg-blue-600 group-hover:text-white transition-colors flex items-center justify-center">
                 <Globe size={24} />
               </div>
               <div className="space-y-1">
-                <div className="text-xs font-mono text-slate-400 uppercase tracking-wider font-semibold">
-                  Cloud Deployments
+                <div className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider font-semibold">
+                  Vercel Deployments
                 </div>
-                <div className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                  vercel.com/canabalcyriljhune-7338
+                <div className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  canabalcyriljhune-7338
                 </div>
               </div>
-              <p className="text-xs text-slate-500 font-sans leading-relaxed">
-                Live Next.js production deployments, preview environments, and performance monitoring.
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+                Live Next.js production deployments and web applications on Vercel.
               </p>
             </div>
-            <div className="pt-4 mt-4 border-t border-slate-100 flex items-center gap-1 font-mono text-xs font-bold text-blue-600">
-              <span>View Vercel Workspace</span>
+            <div className="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-1 font-mono text-xs font-bold text-blue-600 dark:text-blue-400">
+              <span>View Vercel</span>
               <ArrowUpRight size={14} />
             </div>
           </a>
 
-          {/* Email / Academic Contact Card */}
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          {/* School Card */}
+          <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
             <div className="space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center">
                 <GraduationCap size={24} />
               </div>
               <div className="space-y-1">
-                <div className="text-xs font-mono text-slate-400 uppercase tracking-wider font-semibold">
-                  Academic Institution
+                <div className="text-xs font-mono text-slate-400 dark:text-slate-500 uppercase tracking-wider font-semibold">
+                  School
                 </div>
-                <div className="text-base font-bold text-slate-900">
+                <div className="text-base font-bold text-slate-900 dark:text-white">
                   University of Makati
                 </div>
               </div>
-              <p className="text-xs text-slate-500 font-sans leading-relaxed">
-                College of Computing and Information Sciences (CCIS), J.P. Rizal Ext., West Rembo, Taguig / Makati City.
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-sans leading-relaxed">
+                College of Computing and Information Sciences (CCIS), West Rembo, Taguig / Makati City.
               </p>
             </div>
-            <div className="pt-4 mt-4 border-t border-slate-100 flex items-center gap-2 font-mono text-xs text-slate-600">
-              <MapPin size={14} className="text-blue-600" />
-              <span>Brgy. Olympia, Makati City</span>
+            <div className="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center gap-2 font-mono text-xs text-slate-600 dark:text-slate-400">
+              <MapPin size={14} className="text-blue-600 dark:text-blue-400" />
+              <span>Makati City, Philippines</span>
             </div>
           </div>
         </div>
