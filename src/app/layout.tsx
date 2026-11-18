@@ -16,12 +16,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cyril Jhune C. Canabal — Student Portfolio",
+  title: "Cyril Jhune C. Canabal",
   description: "Portfolio of Cyril Jhune C. Canabal, First-Year BSIT Student at the University of Makati (UMak). Built with Next.js and Tailwind CSS.",
   authors: [{ name: "Cyril Jhune C. Canabal" }],
   keywords: ["Cyril Jhune Canabal", "UMak BSIT", "Portfolio", "Web Development"],
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/icon.png", sizes: "256x256", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/icon.png",
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
