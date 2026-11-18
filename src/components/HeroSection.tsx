@@ -103,36 +103,17 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: Student Portrait Card */}
+          {/* Right Column: Transparent Student Portrait */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-sm sm:max-w-md">
-              {/* Outer card frame */}
-              <div className="relative rounded-2xl bg-gradient-to-b from-blue-50 to-slate-100 dark:from-slate-900 dark:to-slate-950 p-2 border border-slate-200 dark:border-slate-800 shadow-xl shadow-blue-500/5">
-                <div className="relative rounded-xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 aspect-[4/5]">
-                  <Image
-                    src="/images/portrait.png"
-                    alt="Portrait of Cyril Jhune C. Canabal"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover object-top hover:scale-105 transition-transform duration-500"
-                  />
-                  {/* Subtle gradient vignette at bottom */}
-                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white dark:from-slate-900 via-white/70 dark:via-slate-900/70 to-transparent" />
-                  
-                  {/* Bottom Name Card */}
-                  <div className="absolute bottom-3 inset-x-3 p-3 rounded-xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 shadow-sm flex items-center justify-between">
-                    <div>
-                      <div className="font-mono text-xs font-bold text-slate-900 dark:text-white">
-                        Cyril Jhune C. Canabal
-                      </div>
-                      <div className="text-[11px] font-mono text-blue-600 dark:text-blue-400 font-semibold">
-                        BSIT Student • CCIS
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="relative w-full max-w-xs sm:max-w-sm aspect-[4/5]">
+              <Image
+                src="/images/portrait-transparent.png"
+                alt="Portrait of Cyril Jhune C. Canabal"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain object-bottom drop-shadow-2xl [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)] hover:scale-[1.03] transition-transform duration-500"
+              />
             </div>
           </div>
         </div>
